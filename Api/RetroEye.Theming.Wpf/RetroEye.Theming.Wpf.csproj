@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RetroEye.Theming.Wpf: WPF styles and a RetroWindow that look like the Windows version RetroEye shows, from the
+    contract v1 state RetroEye.Api reads (docs\API.md), switching live as RetroEye's look changes.
+    PUBLIC SURFACE: it ships un-obfuscated and readable (RetroEye.exe itself stays obfuscated), MIT licensed
+    (..\LICENSE), as the NuGet package RetroEye.Theming.Wpf.
+  -->
+  <PropertyGroup>
+    <TargetFrameworks>net6.0-windows;net10.0-windows</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>RetroEye.Theming.Wpf</RootNamespace>
+    <AssemblyName>RetroEye.Theming.Wpf</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- A missing /// summary on a public member is an error, so the package's IntelliSense is never incomplete -->
+    <WarningsAsErrors>$(WarningsAsErrors);CS1591</WarningsAsErrors>
+    <Product>RetroEye.Theming.Wpf</Product>
+    <!-- .NET 6 is out of support, but kept for Windows 7 and 8.1, as RetroEye keeps it -->
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <!-- Package (authors, licence, icon, readme, symbols, URLs: ..\Directory.Build.props) -->
+    <IsPackable>true</IsPackable>
+    <PackageId>RetroEye.Theming.Wpf</PackageId>
+    <Description>Make a WPF program look like the Windows version RetroEye shows (95, 98, Me, 2000, XP, Vista, 7 and more): the standard controls in that version's theme and colours, and RetroWindow, a window framed with RetroEye's own title bars and caption buttons, switching live when RetroEye's look changes. Built on RetroEye.Api.</Description>
+    <PackageTags>$(PackageTags);WPF</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RetroEye.Api\RetroEye.Api.csproj" />
+  </ItemGroup>
+
+  <!--
+    The package depends on RetroEye.Api [1.1.0, 2.0.0): any later 1.x, never 2.x (contract 2). NuGet writes a project
+    reference as ">= its version", so the range is set on the reference once NuGet has read the versions.
+  -->
+  <Target Name="RetroEyeApiDependencyRange" AfterTargets="_GetProjectReferenceVersions">
+    <ItemGroup>
+      <_ProjectReferencesWithVersions Condition="'%(Filename)' == 'RetroEye.Api'">
+        <ProjectVersion>[$(ApiPackageMinVersion), 2.0.0)</ProjectVersion>
+      </_ProjectReferencesWithVersions>
+    </ItemGroup>
+  </Target>
+
+</Project>

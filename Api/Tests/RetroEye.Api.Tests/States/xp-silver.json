@@ -1,0 +1,306 @@
+{
+  "contract": {
+    "major": 1,
+    "minor": 1,
+    "version": "1.1"
+  },
+  "capabilities": [
+    "state",
+    "state.file",
+    "state.event",
+    "subscribe",
+    "events.themeChanged",
+    "events.versionChanged",
+    "events.dpiChanged",
+    "events.taskbarMoved",
+    "events.started",
+    "events.shuttingDown",
+    "notify",
+    "notify.icons",
+    "notify.click",
+    "notify.close",
+    "parts",
+    "parts.frame",
+    "parts.caption",
+    "parts.buttons",
+    "parts.controls",
+    "glass",
+    "events.restarting"
+  ],
+  "deprecated": [],
+  "sequence": 1,
+  "instance": "test-instance",
+  "running": true,
+  "written": "2026-11-16T12:00:00.000Z",
+  "retroEye": {
+    "version": "1.0.0.8",
+    "processId": 1234
+  },
+  "windows": {
+    "version": "xp",
+    "name": "Windows XP"
+  },
+  "look": {
+    "id": "lunaSilver",
+    "name": "Luna Silver",
+    "classic": false,
+    "theme": "Windows XP Silver",
+    "visualStyle": "Luna.Metallic",
+    "scheme": "Luna Silver"
+  },
+  "colors": {
+    "scrollBar": "#D4D0C8",
+    "desktop": "#585768",
+    "activeCaption": "#C0C0C0",
+    "inactiveCaption": "#FFFFFF",
+    "menu": "#FFFFFF",
+    "window": "#FFFFFF",
+    "windowFrame": "#000000",
+    "menuText": "#000000",
+    "windowText": "#000000",
+    "captionText": "#0E1010",
+    "activeBorder": "#D4D0C8",
+    "inactiveBorder": "#D4D0C8",
+    "appWorkspace": "#808080",
+    "highlight": "#B2B4BF",
+    "highlightText": "#000000",
+    "buttonFace": "#E0DFE3",
+    "buttonShadow": "#9D9DA1",
+    "grayText": "#ACA899",
+    "buttonText": "#000000",
+    "inactiveCaptionText": "#A2A1A1",
+    "buttonHighlight": "#FFFFFF",
+    "buttonDarkShadow": "#716F64",
+    "buttonLight": "#F1EFE2",
+    "infoText": "#000000",
+    "infoBackground": "#FFFFE1",
+    "buttonAlternateFace": "#B5B5B5",
+    "hotLight": "#648BCB",
+    "gradientActiveCaption": "#C8C8C8",
+    "gradientInactiveCaption": "#EEEFF7",
+    "menuHighlight": "#BBB7C7",
+    "menuBar": "#E0E2EB"
+  },
+  "fonts": {
+    "caption": {
+      "face": "Trebuchet MS",
+      "drawnFace": "Trebuchet MS",
+      "sizePt": 10,
+      "weight": 700,
+      "italic": false,
+      "bitmap": false
+    },
+    "smallCaption": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 700,
+      "italic": false,
+      "bitmap": false
+    },
+    "menu": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    },
+    "status": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    },
+    "message": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    },
+    "icon": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    }
+  },
+  "metrics": {
+    "captionHeight": 26,
+    "captionButtonWidth": 18,
+    "captionButtonHeight": 25,
+    "smallCaptionHeight": 18,
+    "borderWidth": 1,
+    "sizingBorderWidth": 0,
+    "paddedBorderWidth": 0,
+    "frameWidth": 4,
+    "fixedFrameWidth": 3,
+    "edge": 2,
+    "menuHeight": 19,
+    "scrollBarWidth": 17,
+    "scrollBarHeight": 17,
+    "iconSize": 32,
+    "iconSpacingX": 75,
+    "iconSpacingY": 75,
+    "captionTextInset": 5
+  },
+  "scale": {
+    "factor": 1,
+    "dpi": 96,
+    "windowsDpi": 96
+  },
+  "chrome": {
+    "frameKind": "luna",
+    "corners": {
+      "shape": "rounded",
+      "radius": 7
+    },
+    "caption": {
+      "active": {
+        "fill": {
+          "kind": "vertical",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FFFFFF"
+            },
+            {
+              "offset": 0.05,
+              "color": "#F4F4F8"
+            },
+            {
+              "offset": 0.12,
+              "color": "#E2E2EA"
+            },
+            {
+              "offset": 0.55,
+              "color": "#C9C9D7"
+            },
+            {
+              "offset": 0.88,
+              "color": "#D9D9E3"
+            },
+            {
+              "offset": 1,
+              "color": "#A8A8BC"
+            }
+          ]
+        },
+        "text": "#000000",
+        "textShadow": null,
+        "textGlow": false
+      },
+      "inactive": {
+        "fill": {
+          "kind": "vertical",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FFFFFF"
+            },
+            {
+              "offset": 0.1,
+              "color": "#F3F3F6"
+            },
+            {
+              "offset": 0.6,
+              "color": "#E6E6EC"
+            },
+            {
+              "offset": 1,
+              "color": "#CDCDD8"
+            }
+          ]
+        },
+        "text": "#8C8C99",
+        "textShadow": null,
+        "textGlow": false
+      },
+      "textAlign": "left",
+      "font": "caption",
+      "iconShown": true,
+      "iconSize": 16,
+      "height": 30
+    },
+    "buttons": {
+      "style": "luna",
+      "order": [
+        "minimize",
+        "maximize",
+        "close"
+      ],
+      "dialogOrder": [
+        "help",
+        "close"
+      ],
+      "width": 21,
+      "height": 21,
+      "closeWidth": 21,
+      "gap": 2,
+      "gapBeforeClose": 2,
+      "glyph": "#3B3B52"
+    },
+    "frame": {
+      "active": "#C0C0CF",
+      "inactive": "#DCDCE4",
+      "thickness": 4,
+      "lines": {
+        "active": {
+          "topLeft": [
+            "#73737C",
+            "#A3A3AF",
+            "#C0C0CF",
+            "#ACACBA"
+          ],
+          "bottomRight": [
+            "#73737C",
+            "#A3A3AF",
+            "#C0C0CF",
+            "#ACACBA"
+          ]
+        },
+        "inactive": {
+          "topLeft": [
+            "#848488",
+            "#BBBBC1",
+            "#DCDCE4",
+            "#C6C6CD"
+          ],
+          "bottomRight": [
+            "#848488",
+            "#BBBBC1",
+            "#DCDCE4",
+            "#C6C6CD"
+          ]
+        }
+      }
+    },
+    "glass": {
+      "enabled": false,
+      "color": null,
+      "intensity": 0,
+      "transparency": false,
+      "opacity": 0
+    }
+  },
+  "taskbar": {
+    "found": false,
+    "edge": "bottom",
+    "height": 28,
+    "autoHide": false,
+    "bounds": null
+  },
+  "parts": {
+    "folder": "parts",
+    "scale": 1,
+    "dpi": 96,
+    "generation": 0,
+    "items": {}
+  }
+}

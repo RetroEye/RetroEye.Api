@@ -1,0 +1,82 @@
+# Builds and tests the app API libraries (RetroEye.Api, RetroEye.Theming.Wpf; MIT) on every push and pull request,
+# and publishes them to nuget.org for a tag api-v<version>, such as api-v1.1.0, whose version must match
+# Api\Directory.Build.props. Publishing needs the repository secret NUGET_API_KEY (a nuget.org key scoped to push
+# RetroEye.*). Api\Tools\CheckPackages.cs checks the packages before anything is pushed.
+
+name: App API
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'api-v*' ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build, test, pack, check (and publish a tag)
+    runs-on: windows-2025
+    env:
+      DOTNET_NOLOGO: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v7
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: |
+          6.0.x
+          10.0.x
+
+    - name: The tag matches the packages' version
+      if: startsWith(github.ref, 'refs/tags/api-v')
+      shell: pwsh
+      run: |
+        $tag = "${{ github.ref_name }}".Substring("api-v".Length)
+        $version = ([xml](Get-Content Api\Directory.Build.props)).Project.PropertyGroup.PackageVersion | Where-Object { $_ } | Select-Object -First 1
+        if ($tag -ne $version) { throw "Tag api-v$tag doesn't match PackageVersion $version in Api\Directory.Build.props" }
+        Write-Host "Releasing the app API packages $version"
+
+    - name: Build the libraries and samples (Release, deterministic, SourceLink)
+      run: |
+        dotnet build Api\RetroEye.Api\RetroEye.Api.csproj -c Release
+        dotnet build Api\RetroEye.Theming.Wpf\RetroEye.Theming.Wpf.csproj -c Release
+        dotnet build Api\Samples\AlertConsole\AlertConsole.csproj -c Release
+        dotnet build Api\Samples\WpfSample\WpfSample.csproj -c Release
+
+    - name: Test (JSON, client on a pipe, contract and schema, public surface baselines, old and new)
+      run: dotnet test Api\Tests\RetroEye.Api.Tests\RetroEye.Api.Tests.csproj -c Release
+
+    - name: Pack
+      run: |
+        dotnet pack Api\RetroEye.Api\RetroEye.Api.csproj -c Release --no-build -o Api\artifacts
+        dotnet pack Api\RetroEye.Theming.Wpf\RetroEye.Theming.Wpf.csproj -c Release --no-build -o Api\artifacts
+
+    - name: Check the packages (only the libraries; readable, documented, not obfuscated; MIT)
+      run: dotnet run Api\Tools\CheckPackages.cs -- Api\artifacts
+
+    - name: Upload the packages
+      uses: actions/upload-artifact@v7
+      with:
+        name: RetroEye app API packages ${{ github.ref_name }}
+        path: |
+          Api\artifacts\*.nupkg
+          Api\artifacts\*.snupkg
+
+    - name: Publish to nuget.org
+      if: startsWith(github.ref, 'refs/tags/api-v')
+      shell: pwsh
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: |
+        if (-not $env:NUGET_API_KEY) { throw "The repository secret NUGET_API_KEY isn't set" }
+        # The .snupkg beside each .nupkg goes up with it (nuget.org's symbol server)
+        foreach ($package in Get-ChildItem Api\artifacts\*.nupkg) {
+          dotnet nuget push $package.FullName --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json --skip-duplicate
+          if ($LASTEXITCODE -ne 0) { throw "Pushing $($package.Name) failed" }
+        }

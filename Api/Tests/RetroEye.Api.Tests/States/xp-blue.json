@@ -1,0 +1,346 @@
+{
+  "contract": {
+    "major": 1,
+    "minor": 1,
+    "version": "1.1"
+  },
+  "capabilities": [
+    "state",
+    "state.file",
+    "state.event",
+    "subscribe",
+    "events.themeChanged",
+    "events.versionChanged",
+    "events.dpiChanged",
+    "events.taskbarMoved",
+    "events.started",
+    "events.shuttingDown",
+    "notify",
+    "notify.icons",
+    "notify.click",
+    "notify.close",
+    "parts",
+    "parts.frame",
+    "parts.caption",
+    "parts.buttons",
+    "parts.controls",
+    "glass",
+    "events.restarting"
+  ],
+  "deprecated": [],
+  "sequence": 1,
+  "instance": "test-instance",
+  "running": true,
+  "written": "2026-11-16T12:00:00.000Z",
+  "retroEye": {
+    "version": "1.0.0.8",
+    "processId": 1234
+  },
+  "windows": {
+    "version": "xp",
+    "name": "Windows XP"
+  },
+  "look": {
+    "id": "lunaBlue",
+    "name": "Luna Blue",
+    "classic": false,
+    "theme": "Windows XP Blue",
+    "visualStyle": "Luna.NormalColor",
+    "scheme": "Luna Blue"
+  },
+  "colors": {
+    "scrollBar": "#D4D0C8",
+    "desktop": "#004E98",
+    "activeCaption": "#0054E3",
+    "inactiveCaption": "#7A96DF",
+    "menu": "#FFFFFF",
+    "window": "#FFFFFF",
+    "windowFrame": "#000000",
+    "menuText": "#000000",
+    "windowText": "#000000",
+    "captionText": "#FFFFFF",
+    "activeBorder": "#D4D0C8",
+    "inactiveBorder": "#D4D0C8",
+    "appWorkspace": "#808080",
+    "highlight": "#316AC5",
+    "highlightText": "#FFFFFF",
+    "buttonFace": "#ECE9D8",
+    "buttonShadow": "#ACA899",
+    "grayText": "#ACA899",
+    "buttonText": "#000000",
+    "inactiveCaptionText": "#D8E4F8",
+    "buttonHighlight": "#FFFFFF",
+    "buttonDarkShadow": "#716F64",
+    "buttonLight": "#F1EFE2",
+    "infoText": "#000000",
+    "infoBackground": "#FFFFE1",
+    "buttonAlternateFace": "#B5B5B5",
+    "hotLight": "#000080",
+    "gradientActiveCaption": "#3D95FF",
+    "gradientInactiveCaption": "#9DB9EB",
+    "menuHighlight": "#316AC5",
+    "menuBar": "#ECE9D8"
+  },
+  "fonts": {
+    "caption": {
+      "face": "Trebuchet MS",
+      "drawnFace": "Trebuchet MS",
+      "sizePt": 10,
+      "weight": 700,
+      "italic": false,
+      "bitmap": false
+    },
+    "smallCaption": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 700,
+      "italic": false,
+      "bitmap": false
+    },
+    "menu": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    },
+    "status": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    },
+    "message": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    },
+    "icon": {
+      "face": "Tahoma",
+      "drawnFace": "Tahoma",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": false
+    }
+  },
+  "metrics": {
+    "captionHeight": 26,
+    "captionButtonWidth": 18,
+    "captionButtonHeight": 25,
+    "smallCaptionHeight": 18,
+    "borderWidth": 1,
+    "sizingBorderWidth": 0,
+    "paddedBorderWidth": 0,
+    "frameWidth": 4,
+    "fixedFrameWidth": 3,
+    "edge": 2,
+    "menuHeight": 19,
+    "scrollBarWidth": 17,
+    "scrollBarHeight": 17,
+    "iconSize": 32,
+    "iconSpacingX": 75,
+    "iconSpacingY": 75,
+    "captionTextInset": 5
+  },
+  "scale": {
+    "factor": 1,
+    "dpi": 96,
+    "windowsDpi": 96
+  },
+  "chrome": {
+    "frameKind": "luna",
+    "corners": {
+      "shape": "rounded",
+      "radius": 7
+    },
+    "caption": {
+      "active": {
+        "fill": {
+          "kind": "vertical",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#0A5BE8"
+            },
+            {
+              "offset": 0.035,
+              "color": "#4395FF"
+            },
+            {
+              "offset": 0.07,
+              "color": "#2D8DFF"
+            },
+            {
+              "offset": 0.1,
+              "color": "#0B70F6"
+            },
+            {
+              "offset": 0.14,
+              "color": "#0065F3"
+            },
+            {
+              "offset": 0.24,
+              "color": "#0154DE"
+            },
+            {
+              "offset": 0.5,
+              "color": "#0054E5"
+            },
+            {
+              "offset": 0.62,
+              "color": "#0257EE"
+            },
+            {
+              "offset": 0.72,
+              "color": "#0262F7"
+            },
+            {
+              "offset": 0.8,
+              "color": "#0469FF"
+            },
+            {
+              "offset": 0.88,
+              "color": "#0466FC"
+            },
+            {
+              "offset": 0.94,
+              "color": "#0361F7"
+            },
+            {
+              "offset": 0.97,
+              "color": "#024FD1"
+            },
+            {
+              "offset": 1,
+              "color": "#154399"
+            }
+          ]
+        },
+        "text": "#FFFFFF",
+        "textShadow": "#0A1883",
+        "textGlow": false
+      },
+      "inactive": {
+        "fill": {
+          "kind": "vertical",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#7A96DF"
+            },
+            {
+              "offset": 0.04,
+              "color": "#B0C2EC"
+            },
+            {
+              "offset": 0.08,
+              "color": "#93ABE8"
+            },
+            {
+              "offset": 0.6,
+              "color": "#7E9DE3"
+            },
+            {
+              "offset": 0.9,
+              "color": "#86A2E6"
+            },
+            {
+              "offset": 1,
+              "color": "#6F8BD8"
+            }
+          ]
+        },
+        "text": "#D8E4F8",
+        "textShadow": null,
+        "textGlow": false
+      },
+      "textAlign": "left",
+      "font": "caption",
+      "iconShown": true,
+      "iconSize": 16,
+      "height": 30
+    },
+    "buttons": {
+      "style": "luna",
+      "order": [
+        "minimize",
+        "maximize",
+        "close"
+      ],
+      "dialogOrder": [
+        "help",
+        "close"
+      ],
+      "width": 21,
+      "height": 21,
+      "closeWidth": 21,
+      "gap": 2,
+      "gapBeforeClose": 2,
+      "glyph": "#FFFFFF"
+    },
+    "frame": {
+      "active": "#0855DD",
+      "inactive": "#7E9DE3",
+      "thickness": 4,
+      "lines": {
+        "active": {
+          "topLeft": [
+            "#0A2A96",
+            "#0339BD",
+            "#1F5BDD",
+            "#2049B0"
+          ],
+          "bottomRight": [
+            "#0A2A96",
+            "#0339BD",
+            "#1F5BDD",
+            "#2049B0"
+          ]
+        },
+        "inactive": {
+          "topLeft": [
+            "#4B5E88",
+            "#6B85C0",
+            "#7E9DE3",
+            "#718DCC"
+          ],
+          "bottomRight": [
+            "#4B5E88",
+            "#6B85C0",
+            "#7E9DE3",
+            "#718DCC"
+          ]
+        }
+      }
+    },
+    "glass": {
+      "enabled": false,
+      "color": null,
+      "intensity": 0,
+      "transparency": false,
+      "opacity": 0
+    }
+  },
+  "taskbar": {
+    "found": false,
+    "edge": "bottom",
+    "height": 28,
+    "autoHide": false,
+    "bounds": null
+  },
+  "parts": {
+    "folder": "parts",
+    "scale": 1,
+    "dpi": 96,
+    "generation": 0,
+    "items": {}
+  }
+}

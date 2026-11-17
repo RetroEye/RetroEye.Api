@@ -1,0 +1,72 @@
+﻿<Project>
+  <!--
+    The public app API libraries (RetroEye.Api, RetroEye.Theming.Wpf) and their samples are versioned on their own,
+    by semantic versioning tied to the contract (docs\API.md, "Versioning and compatibility"), not by RetroEye's own
+    version: 1.x speaks contract major 1, and their public surface only grows within 1.x (checked against the
+    baselines in Api\Tests\RetroEye.Api.Tests\ApiBaseline). This file imports no Directory.Build.props above it, so
+    nothing from outside Api\ sets their versions.
+  -->
+  <PropertyGroup>
+    <!-- 1.MINOR.PATCH: MINOR follows the contract minor's additions, PATCH fixes -->
+    <Version>1.1.0</Version>
+    <!-- Kept at 1.0.0.0 for all of 1.x, so a program built on 1.0 loads any later 1.x without a binding redirect -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <PackageVersion>1.1.0</PackageVersion>
+    <!-- The lowest RetroEye.Api a RetroEye.Theming.Wpf package asks for; the range ends before 2.0.0 (contract 2) -->
+    <ApiPackageMinVersion>1.1.0</ApiPackageMinVersion>
+  </PropertyGroup>
+
+  <!--
+    NuGet packages (nuget.org, from GoodEye Studios). Only the two libraries are packable (IsPackable in their csproj);
+    the samples are not. The libraries are MIT (Api\LICENSE); RetroEye itself stays closed and is never in a package
+    (Api\Tools\CheckPackages.cs fails a release if it is). Publishing: .github\workflows\api-nuget.yml, for a tag api-v*.
+  -->
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <Authors>GoodEye Studios</Authors>
+    <Company>GoodEye Studios</Company>
+    <Copyright>Copyright (c) 2026 GoodEye Studios</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <!-- The libraries' source is public in the RetroEye.Api repository (MIT); RetroEye itself is at RetroEye/RetroEye -->
+    <PackageProjectUrl>https://github.com/RetroEye/RetroEye.Api</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/RetroEye/RetroEye.Api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>RetroEye;retro;Windows 95;Windows 98;Windows XP;Windows 7;theme;look and feel;tray;notifications;GoodEye</PackageTags>
+    <PackageReleaseNotes>1.1: contract 1.1 (restarting event), reconnect events, TryNotifyAsync, waiting for RetroEye's welcome. Every 1.0 program keeps working.</PackageReleaseNotes>
+    <!-- Symbols as a separate .snupkg (nuget.org's symbol server) -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <DebugType>portable</DebugType>
+    <Deterministic>true</Deterministic>
+    <!--
+      RetroEyeApiPublicSource is true in the public RetroEye.Api repository's copy of this file: SourceLink then
+      points debuggers at that repository's commit, and the package names the commit it was built from. A build of
+      these files anywhere else leaves it false (no SourceLink, no commit id), so a package never points at source
+      nobody can read.
+    -->
+    <RetroEyeApiPublicSource>true</RetroEyeApiPublicSource>
+    <EnableSourceLink>$(RetroEyeApiPublicSource)</EnableSourceLink>
+    <EnableSourceControlManagerQueries>$(RetroEyeApiPublicSource)</EnableSourceControlManagerQueries>
+    <PublishRepositoryUrl>$(RetroEyeApiPublicSource)</PublishRepositoryUrl>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)artifacts\</PackageOutputPath>
+  </PropertyGroup>
+
+  <!-- In CI (GitHub Actions) builds are reproducible: paths in the PDBs become /_/ -->
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true' Or '$(CI)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(ContinuousIntegrationBuild)' == 'true' And '$(RetroEyeApiPublicSource)' != 'true'">
+    <!-- With SourceLink off nothing else maps the source root, so map the repository root (one above Api\) to /_/ -->
+    <SourceRoot Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\'))" />
+  </ItemGroup>
+
+  <!-- What every package carries beside its DLLs: the readme, the GoodEye logo and the licence text -->
+  <ItemGroup Condition="'$(IsPackable)' == 'true'">
+    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="$(MSBuildThisFileDirectory)LICENSE" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+</Project>

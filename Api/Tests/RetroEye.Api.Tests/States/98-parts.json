@@ -1,0 +1,782 @@
+{
+  "contract": {
+    "major": 1,
+    "minor": 1,
+    "version": "1.1"
+  },
+  "capabilities": [
+    "state",
+    "state.file",
+    "state.event",
+    "subscribe",
+    "events.themeChanged",
+    "events.versionChanged",
+    "events.dpiChanged",
+    "events.taskbarMoved",
+    "events.started",
+    "events.shuttingDown",
+    "notify",
+    "notify.icons",
+    "notify.click",
+    "notify.close",
+    "parts",
+    "parts.frame",
+    "parts.caption",
+    "parts.buttons",
+    "parts.controls",
+    "glass",
+    "events.restarting"
+  ],
+  "deprecated": [],
+  "sequence": 1,
+  "instance": "test-instance",
+  "running": true,
+  "written": "2026-11-16T12:00:00.000Z",
+  "retroEye": {
+    "version": "1.0.0.8",
+    "processId": 1234
+  },
+  "windows": {
+    "version": "98",
+    "name": "Windows 98"
+  },
+  "look": {
+    "id": "classic",
+    "name": "Classic",
+    "classic": true,
+    "theme": "Windows 95-98",
+    "visualStyle": "Classic",
+    "scheme": "Windows Standard"
+  },
+  "colors": {
+    "scrollBar": "#C0C0C0",
+    "desktop": "#008080",
+    "activeCaption": "#000080",
+    "inactiveCaption": "#808080",
+    "menu": "#C0C0C0",
+    "window": "#FFFFFF",
+    "windowFrame": "#000000",
+    "menuText": "#000000",
+    "windowText": "#000000",
+    "captionText": "#FFFFFF",
+    "activeBorder": "#C0C0C0",
+    "inactiveBorder": "#C0C0C0",
+    "appWorkspace": "#808080",
+    "highlight": "#000080",
+    "highlightText": "#FFFFFF",
+    "buttonFace": "#C0C0C0",
+    "buttonShadow": "#808080",
+    "grayText": "#808080",
+    "buttonText": "#000000",
+    "inactiveCaptionText": "#C0C0C0",
+    "buttonHighlight": "#FFFFFF",
+    "buttonDarkShadow": "#000000",
+    "buttonLight": "#C0C0C0",
+    "infoText": "#000000",
+    "infoBackground": "#FFFFE1",
+    "buttonAlternateFace": "#C0C0C0",
+    "hotLight": "#000080",
+    "gradientActiveCaption": "#1084D0",
+    "gradientInactiveCaption": "#C0C0C0",
+    "menuHighlight": "#000080",
+    "menuBar": "#C0C0C0"
+  },
+  "fonts": {
+    "caption": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 700,
+      "italic": false,
+      "bitmap": true
+    },
+    "smallCaption": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 700,
+      "italic": false,
+      "bitmap": true
+    },
+    "menu": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    },
+    "status": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    },
+    "message": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    },
+    "icon": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    }
+  },
+  "metrics": {
+    "captionHeight": 19,
+    "captionButtonWidth": 18,
+    "captionButtonHeight": 18,
+    "smallCaptionHeight": 16,
+    "borderWidth": 1,
+    "sizingBorderWidth": 1,
+    "paddedBorderWidth": 0,
+    "frameWidth": 4,
+    "fixedFrameWidth": 3,
+    "edge": 2,
+    "menuHeight": 19,
+    "scrollBarWidth": 16,
+    "scrollBarHeight": 16,
+    "iconSize": 32,
+    "iconSpacingX": 75,
+    "iconSpacingY": 75,
+    "captionTextInset": 2
+  },
+  "scale": {
+    "factor": 1,
+    "dpi": 96,
+    "windowsDpi": 96
+  },
+  "chrome": {
+    "frameKind": "raised3d",
+    "corners": {
+      "shape": "square",
+      "radius": 0
+    },
+    "caption": {
+      "active": {
+        "fill": {
+          "kind": "horizontal",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#000080"
+            },
+            {
+              "offset": 1,
+              "color": "#1084D0"
+            }
+          ]
+        },
+        "text": "#FFFFFF",
+        "textShadow": null,
+        "textGlow": false
+      },
+      "inactive": {
+        "fill": {
+          "kind": "horizontal",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#808080"
+            },
+            {
+              "offset": 1,
+              "color": "#C0C0C0"
+            }
+          ]
+        },
+        "text": "#C0C0C0",
+        "textShadow": null,
+        "textGlow": false
+      },
+      "textAlign": "left",
+      "font": "caption",
+      "iconShown": true,
+      "iconSize": 16,
+      "height": 18
+    },
+    "buttons": {
+      "style": "classic3d",
+      "order": [
+        "minimize",
+        "maximize",
+        "close"
+      ],
+      "dialogOrder": [
+        "help",
+        "close"
+      ],
+      "width": 16,
+      "height": 14,
+      "closeWidth": 16,
+      "gap": 0,
+      "gapBeforeClose": 2,
+      "glyph": "#000000"
+    },
+    "frame": {
+      "active": "#C0C0C0",
+      "inactive": "#C0C0C0",
+      "thickness": 4,
+      "lines": {
+        "active": {
+          "topLeft": [
+            "#C0C0C0",
+            "#FFFFFF"
+          ],
+          "bottomRight": [
+            "#000000",
+            "#808080"
+          ]
+        },
+        "inactive": {
+          "topLeft": [
+            "#C0C0C0",
+            "#FFFFFF"
+          ],
+          "bottomRight": [
+            "#000000",
+            "#808080"
+          ]
+        }
+      }
+    },
+    "glass": {
+      "enabled": false,
+      "color": null,
+      "intensity": 0,
+      "transparency": false,
+      "opacity": 0
+    }
+  },
+  "taskbar": {
+    "found": false,
+    "edge": "bottom",
+    "height": 28,
+    "autoHide": false,
+    "bounds": null
+  },
+  "parts": {
+    "folder": "parts",
+    "scale": 1,
+    "dpi": 96,
+    "generation": 1,
+    "items": {
+      "frameActive": {
+        "file": "frame-active.png",
+        "width": 240,
+        "height": 160,
+        "slice": {
+          "left": 4,
+          "top": 23,
+          "right": 4,
+          "bottom": 4
+        },
+        "content": {
+          "left": 4,
+          "top": 23,
+          "right": 4,
+          "bottom": 4
+        }
+      },
+      "frameInactive": {
+        "file": "frame-inactive.png",
+        "width": 240,
+        "height": 160,
+        "slice": {
+          "left": 4,
+          "top": 23,
+          "right": 4,
+          "bottom": 4
+        },
+        "content": {
+          "left": 4,
+          "top": 23,
+          "right": 4,
+          "bottom": 4
+        }
+      },
+      "captionActive": {
+        "file": "caption-active.png",
+        "width": 232,
+        "height": 18,
+        "slice": {
+          "left": 2,
+          "top": 0,
+          "right": 2,
+          "bottom": 0
+        }
+      },
+      "captionInactive": {
+        "file": "caption-inactive.png",
+        "width": 232,
+        "height": 18,
+        "slice": {
+          "left": 2,
+          "top": 0,
+          "right": 2,
+          "bottom": 0
+        }
+      },
+      "button.minimize.normal": {
+        "file": "button-minimize-normal.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.maximize.normal": {
+        "file": "button-maximize-normal.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.close.normal": {
+        "file": "button-close-normal.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.restore.normal": {
+        "file": "button-restore-normal.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.minimize.hot": {
+        "file": "button-minimize-hot.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.maximize.hot": {
+        "file": "button-maximize-hot.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.close.hot": {
+        "file": "button-close-hot.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.restore.hot": {
+        "file": "button-restore-hot.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.minimize.pressed": {
+        "file": "button-minimize-pressed.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.maximize.pressed": {
+        "file": "button-maximize-pressed.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.close.pressed": {
+        "file": "button-close-pressed.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.restore.pressed": {
+        "file": "button-restore-pressed.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.minimize.disabled": {
+        "file": "button-minimize-disabled.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.maximize.disabled": {
+        "file": "button-maximize-disabled.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.close.disabled": {
+        "file": "button-close-disabled.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.restore.disabled": {
+        "file": "button-restore-disabled.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.minimize.inactive": {
+        "file": "button-minimize-inactive.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.maximize.inactive": {
+        "file": "button-maximize-inactive.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.close.inactive": {
+        "file": "button-close-inactive.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.restore.inactive": {
+        "file": "button-restore-inactive.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "pushButton.normal": {
+        "file": "pushbutton-normal.png",
+        "width": 75,
+        "height": 23,
+        "slice": {
+          "left": 3,
+          "top": 3,
+          "right": 3,
+          "bottom": 3
+        }
+      },
+      "textBox.normal": {
+        "file": "textbox-normal.png",
+        "width": 100,
+        "height": 21,
+        "slice": {
+          "left": 2,
+          "top": 2,
+          "right": 2,
+          "bottom": 2
+        }
+      },
+      "scrollArrow.up.normal": {
+        "file": "scrollarrow-up-normal.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.down.normal": {
+        "file": "scrollarrow-down-normal.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.left.normal": {
+        "file": "scrollarrow-left-normal.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.right.normal": {
+        "file": "scrollarrow-right-normal.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "pushButton.pressed": {
+        "file": "pushbutton-pressed.png",
+        "width": 75,
+        "height": 23,
+        "slice": {
+          "left": 3,
+          "top": 3,
+          "right": 3,
+          "bottom": 3
+        }
+      },
+      "scrollArrow.up.pressed": {
+        "file": "scrollarrow-up-pressed.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.down.pressed": {
+        "file": "scrollarrow-down-pressed.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.left.pressed": {
+        "file": "scrollarrow-left-pressed.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.right.pressed": {
+        "file": "scrollarrow-right-pressed.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "pushButton.disabled": {
+        "file": "pushbutton-disabled.png",
+        "width": 75,
+        "height": 23,
+        "slice": {
+          "left": 3,
+          "top": 3,
+          "right": 3,
+          "bottom": 3
+        }
+      },
+      "scrollArrow.up.disabled": {
+        "file": "scrollarrow-up-disabled.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.down.disabled": {
+        "file": "scrollarrow-down-disabled.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.left.disabled": {
+        "file": "scrollarrow-left-disabled.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "scrollArrow.right.disabled": {
+        "file": "scrollarrow-right-disabled.png",
+        "width": 16,
+        "height": 16,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "pushButton.default": {
+        "file": "pushbutton-default.png",
+        "width": 75,
+        "height": 23,
+        "slice": {
+          "left": 3,
+          "top": 3,
+          "right": 3,
+          "bottom": 3
+        }
+      },
+      "button.help.normal": {
+        "file": "button-help-normal.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.help.hot": {
+        "file": "button-help-hot.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.help.pressed": {
+        "file": "button-help-pressed.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "button.help.inactive": {
+        "file": "button-help-inactive.png",
+        "width": 16,
+        "height": 14,
+        "slice": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      }
+    }
+  }
+}

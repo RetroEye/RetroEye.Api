@@ -1,0 +1,14 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+artifacts/
+[Tt]est[Rr]esult*/
+*.nupkg
+*.snupkg
+
+# Editors
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo

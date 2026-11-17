@@ -1,0 +1,422 @@
+RetroEye.Api.ApiCaptionState :: Constructor Void .ctor(RetroEye.Api.ApiJson)
+RetroEye.Api.ApiCaptionState :: Method Boolean get_TextGlow()
+RetroEye.Api.ApiCaptionState :: Method RetroEye.Api.ApiColor get_Text()
+RetroEye.Api.ApiCaptionState :: Method RetroEye.Api.ApiFill get_Fill()
+RetroEye.Api.ApiCaptionState :: Method RetroEye.Api.ApiJson get_Raw()
+RetroEye.Api.ApiCaptionState :: Method System.Nullable`1[RetroEye.Api.ApiColor] get_TextShadow()
+RetroEye.Api.ApiCaptionState :: Property Boolean TextGlow
+RetroEye.Api.ApiCaptionState :: Property RetroEye.Api.ApiColor Text
+RetroEye.Api.ApiCaptionState :: Property RetroEye.Api.ApiFill Fill
+RetroEye.Api.ApiCaptionState :: Property RetroEye.Api.ApiJson Raw
+RetroEye.Api.ApiCaptionState :: Property System.Nullable`1[RetroEye.Api.ApiColor] TextShadow
+RetroEye.Api.ApiColor :: Constructor Void .ctor(Byte, Byte, Byte)
+RetroEye.Api.ApiColor :: Method Boolean Equals(RetroEye.Api.ApiColor)
+RetroEye.Api.ApiColor :: Method Boolean Equals(System.Object)
+RetroEye.Api.ApiColor :: Method Byte get_B()
+RetroEye.Api.ApiColor :: Method Byte get_G()
+RetroEye.Api.ApiColor :: Method Byte get_R()
+RetroEye.Api.ApiColor :: Method Int32 GetHashCode()
+RetroEye.Api.ApiColor :: Method Int32 ToColorRef()
+RetroEye.Api.ApiColor :: Method RetroEye.Api.ApiColor Parse(System.String, RetroEye.Api.ApiColor)
+RetroEye.Api.ApiColor :: Method System.String ToString()
+RetroEye.Api.ApiColor :: Property Byte B
+RetroEye.Api.ApiColor :: Property Byte G
+RetroEye.Api.ApiColor :: Property Byte R
+RetroEye.Api.ApiColorNames :: Field System.Collections.Generic.IReadOnlyList`1[System.String] All
+RetroEye.Api.ApiColorNames :: Method Int32 IndexOf(System.String)
+RetroEye.Api.ApiFill :: Constructor Void .ctor(RetroEye.Api.ApiJson)
+RetroEye.Api.ApiFill :: Method RetroEye.Api.ApiJson get_Raw()
+RetroEye.Api.ApiFill :: Method System.Collections.Generic.IReadOnlyList`1[RetroEye.Api.ApiGradientStop] get_Stops()
+RetroEye.Api.ApiFill :: Method System.String get_Kind()
+RetroEye.Api.ApiFill :: Property RetroEye.Api.ApiJson Raw
+RetroEye.Api.ApiFill :: Property System.Collections.Generic.IReadOnlyList`1[RetroEye.Api.ApiGradientStop] Stops
+RetroEye.Api.ApiFill :: Property System.String Kind
+RetroEye.Api.ApiFont :: Constructor Void .ctor(RetroEye.Api.ApiJson)
+RetroEye.Api.ApiFont :: Method Boolean get_Bitmap()
+RetroEye.Api.ApiFont :: Method Boolean get_Bold()
+RetroEye.Api.ApiFont :: Method Boolean get_Italic()
+RetroEye.Api.ApiFont :: Method Double get_SizePixels()
+RetroEye.Api.ApiFont :: Method Double get_SizePoints()
+RetroEye.Api.ApiFont :: Method Int32 get_Weight()
+RetroEye.Api.ApiFont :: Method RetroEye.Api.ApiJson get_Raw()
+RetroEye.Api.ApiFont :: Method System.String get_DrawnFace()
+RetroEye.Api.ApiFont :: Method System.String get_Face()
+RetroEye.Api.ApiFont :: Property Boolean Bitmap
+RetroEye.Api.ApiFont :: Property Boolean Bold
+RetroEye.Api.ApiFont :: Property Boolean Italic
+RetroEye.Api.ApiFont :: Property Double SizePixels
+RetroEye.Api.ApiFont :: Property Double SizePoints
+RetroEye.Api.ApiFont :: Property Int32 Weight
+RetroEye.Api.ApiFont :: Property RetroEye.Api.ApiJson Raw
+RetroEye.Api.ApiFont :: Property System.String DrawnFace
+RetroEye.Api.ApiFont :: Property System.String Face
+RetroEye.Api.ApiGradientStop :: Constructor Void .ctor(Double, RetroEye.Api.ApiColor)
+RetroEye.Api.ApiGradientStop :: Method Double get_Offset()
+RetroEye.Api.ApiGradientStop :: Method RetroEye.Api.ApiColor get_Color()
+RetroEye.Api.ApiGradientStop :: Property Double Offset
+RetroEye.Api.ApiGradientStop :: Property RetroEye.Api.ApiColor Color
+RetroEye.Api.ApiJson :: Field Int32 MaxDepth
+RetroEye.Api.ApiJson :: Field RetroEye.Api.ApiJson Missing
+RetroEye.Api.ApiJson :: Method Boolean AsBool(Boolean)
+RetroEye.Api.ApiJson :: Method Boolean Has(System.String)
+RetroEye.Api.ApiJson :: Method Boolean TryParse(System.String, RetroEye.Api.ApiJson ByRef)
+RetroEye.Api.ApiJson :: Method Boolean get_IsNull()
+RetroEye.Api.ApiJson :: Method Double AsNumber(Double)
+RetroEye.Api.ApiJson :: Method Int32 AsInt(Int32)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson Add(RetroEye.Api.ApiJson)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson From(Boolean)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson From(Double)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson From(System.String)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson NewArray()
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson NewObject()
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson Null()
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson Parse(System.String)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson Set(System.String, Boolean)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson Set(System.String, Double)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson Set(System.String, RetroEye.Api.ApiJson)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson Set(System.String, System.String)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson get_Item(Int32)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJson get_Item(System.String)
+RetroEye.Api.ApiJson :: Method RetroEye.Api.ApiJsonKind get_Kind()
+RetroEye.Api.ApiJson :: Method System.Collections.Generic.IReadOnlyList`1[RetroEye.Api.ApiJson] get_Items()
+RetroEye.Api.ApiJson :: Method System.Collections.Generic.IReadOnlyList`1[System.Collections.Generic.KeyValuePair`2[System.String,RetroEye.Api.ApiJson]] get_Members()
+RetroEye.Api.ApiJson :: Method System.String AsString(System.String)
+RetroEye.Api.ApiJson :: Method System.String AsStringOrNull()
+RetroEye.Api.ApiJson :: Method System.String ToIndentedString()
+RetroEye.Api.ApiJson :: Method System.String ToString()
+RetroEye.Api.ApiJson :: Property Boolean IsNull
+RetroEye.Api.ApiJson :: Property RetroEye.Api.ApiJson Item [Int32]
+RetroEye.Api.ApiJson :: Property RetroEye.Api.ApiJson Item [System.String]
+RetroEye.Api.ApiJson :: Property RetroEye.Api.ApiJsonKind Kind
+RetroEye.Api.ApiJson :: Property System.Collections.Generic.IReadOnlyList`1[RetroEye.Api.ApiJson] Items
+RetroEye.Api.ApiJson :: Property System.Collections.Generic.IReadOnlyList`1[System.Collections.Generic.KeyValuePair`2[System.String,RetroEye.Api.ApiJson]] Members
+RetroEye.Api.ApiJsonKind :: Field Int32 value__
+RetroEye.Api.ApiJsonKind :: Field RetroEye.Api.ApiJsonKind Array
+RetroEye.Api.ApiJsonKind :: Field RetroEye.Api.ApiJsonKind Boolean
+RetroEye.Api.ApiJsonKind :: Field RetroEye.Api.ApiJsonKind Null
+RetroEye.Api.ApiJsonKind :: Field RetroEye.Api.ApiJsonKind Number
+RetroEye.Api.ApiJsonKind :: Field RetroEye.Api.ApiJsonKind Object
+RetroEye.Api.ApiJsonKind :: Field RetroEye.Api.ApiJsonKind String
+RetroEye.Api.ApiNames :: Field Int32 ContractMajor
+RetroEye.Api.ApiNames :: Field Int32 ContractMinor
+RetroEye.Api.ApiNames :: Field Int32 DefaultTimeout
+RetroEye.Api.ApiNames :: Field Int32 EventPulse
+RetroEye.Api.ApiNames :: Field Int32 MaxClientLine
+RetroEye.Api.ApiNames :: Field Int32 MaxClients
+RetroEye.Api.ApiNames :: Field Int32 MaxName
+RetroEye.Api.ApiNames :: Field Int32 MaxQueued
+RetroEye.Api.ApiNames :: Field Int32 MaxQueuedPerClient
+RetroEye.Api.ApiNames :: Field Int32 MaxServerLine
+RetroEye.Api.ApiNames :: Field Int32 MaxText
+RetroEye.Api.ApiNames :: Field Int32 MaxTimeout
+RetroEye.Api.ApiNames :: Field Int32 MaxTitle
+RetroEye.Api.ApiNames :: Field Int32 MinTimeout
+RetroEye.Api.ApiNames :: Field Int32 RateBurst
+RetroEye.Api.ApiNames :: Field Int32 RatePerSecond
+RetroEye.Api.ApiNames :: Field Int32[] SupportedMajors
+RetroEye.Api.ApiNames :: Field System.String ChannelVariable
+RetroEye.Api.ApiNames :: Field System.String FolderVariable
+RetroEye.Api.ApiNames :: Field System.String PartsFolder
+RetroEye.Api.ApiNames :: Field System.String ThemeFile
+RetroEye.Api.ApiNames :: Field System.String[] Capabilities
+RetroEye.Api.ApiNames :: Method Int32 SessionId()
+RetroEye.Api.ApiNames :: Method RetroEye.Api.ApiJson CapabilitiesJson()
+RetroEye.Api.ApiNames :: Method RetroEye.Api.ApiJson ContractJson()
+RetroEye.Api.ApiNames :: Method RetroEye.Api.ApiJson DeprecatedJson()
+RetroEye.Api.ApiNames :: Method System.String ChangedEventName(System.String, System.String)
+RetroEye.Api.ApiNames :: Method System.String CleanChannel(System.String)
+RetroEye.Api.ApiNames :: Method System.String DefaultChannel()
+RetroEye.Api.ApiNames :: Method System.String DefaultFolder()
+RetroEye.Api.ApiNames :: Method System.String PipeName(System.String, Int32, System.String)
+RetroEye.Api.ApiNames :: Method System.String UserSid()
+RetroEye.Api.ApiNames :: Method System.String get_ContractVersion()
+RetroEye.Api.ApiNames :: Property System.String ContractVersion
+RetroEye.Api.ApiPart :: Constructor Void .ctor(System.String, RetroEye.Api.ApiJson, System.String)
+RetroEye.Api.ApiPart :: Method Int32 get_Height()
+RetroEye.Api.ApiPart :: Method Int32 get_SliceBottom()
+RetroEye.Api.ApiPart :: Method Int32 get_SliceLeft()
+RetroEye.Api.ApiPart :: Method Int32 get_SliceRight()
+RetroEye.Api.ApiPart :: Method Int32 get_SliceTop()
+RetroEye.Api.ApiPart :: Method Int32 get_Width()
+RetroEye.Api.ApiPart :: Method RetroEye.Api.ApiJson get_Raw()
+RetroEye.Api.ApiPart :: Method System.String get_File()
+RetroEye.Api.ApiPart :: Method System.String get_FullPath()
+RetroEye.Api.ApiPart :: Method System.String get_Name()
+RetroEye.Api.ApiPart :: Property Int32 Height
+RetroEye.Api.ApiPart :: Property Int32 SliceBottom
+RetroEye.Api.ApiPart :: Property Int32 SliceLeft
+RetroEye.Api.ApiPart :: Property Int32 SliceRight
+RetroEye.Api.ApiPart :: Property Int32 SliceTop
+RetroEye.Api.ApiPart :: Property Int32 Width
+RetroEye.Api.ApiPart :: Property RetroEye.Api.ApiJson Raw
+RetroEye.Api.ApiPart :: Property System.String File
+RetroEye.Api.ApiPart :: Property System.String FullPath
+RetroEye.Api.ApiPart :: Property System.String Name
+RetroEye.Api.Notification :: Constructor Void .ctor()
+RetroEye.Api.Notification :: Method RetroEye.Api.ApiJson ToJson()
+RetroEye.Api.Notification :: Method RetroEye.Api.NotificationIcon get_Icon()
+RetroEye.Api.Notification :: Method System.Nullable`1[System.Int32] get_TimeoutMs()
+RetroEye.Api.Notification :: Method System.String get_AppName()
+RetroEye.Api.Notification :: Method System.String get_Tag()
+RetroEye.Api.Notification :: Method System.String get_Text()
+RetroEye.Api.Notification :: Method System.String get_Title()
+RetroEye.Api.Notification :: Method Void set_AppName(System.String)
+RetroEye.Api.Notification :: Method Void set_Icon(RetroEye.Api.NotificationIcon)
+RetroEye.Api.Notification :: Method Void set_Tag(System.String)
+RetroEye.Api.Notification :: Method Void set_Text(System.String)
+RetroEye.Api.Notification :: Method Void set_TimeoutMs(System.Nullable`1[System.Int32])
+RetroEye.Api.Notification :: Method Void set_Title(System.String)
+RetroEye.Api.Notification :: Property RetroEye.Api.NotificationIcon Icon
+RetroEye.Api.Notification :: Property System.Nullable`1[System.Int32] TimeoutMs
+RetroEye.Api.Notification :: Property System.String AppName
+RetroEye.Api.Notification :: Property System.String Tag
+RetroEye.Api.Notification :: Property System.String Text
+RetroEye.Api.Notification :: Property System.String Title
+RetroEye.Api.NotificationEventArgs :: Constructor Void .ctor(System.String, System.String, System.String)
+RetroEye.Api.NotificationEventArgs :: Method System.String get_Id()
+RetroEye.Api.NotificationEventArgs :: Method System.String get_Reason()
+RetroEye.Api.NotificationEventArgs :: Method System.String get_Tag()
+RetroEye.Api.NotificationEventArgs :: Property System.String Id
+RetroEye.Api.NotificationEventArgs :: Property System.String Reason
+RetroEye.Api.NotificationEventArgs :: Property System.String Tag
+RetroEye.Api.NotificationIcon :: Field Int32 value__
+RetroEye.Api.NotificationIcon :: Field RetroEye.Api.NotificationIcon Error
+RetroEye.Api.NotificationIcon :: Field RetroEye.Api.NotificationIcon Info
+RetroEye.Api.NotificationIcon :: Field RetroEye.Api.NotificationIcon None
+RetroEye.Api.NotificationIcon :: Field RetroEye.Api.NotificationIcon Warning
+RetroEye.Api.NotifyResult :: Constructor Void .ctor(RetroEye.Api.NotifyStatus, System.String, System.String, System.String)
+RetroEye.Api.NotifyResult :: Method Boolean get_Queued()
+RetroEye.Api.NotifyResult :: Method RetroEye.Api.NotifyStatus get_Status()
+RetroEye.Api.NotifyResult :: Method System.String ToString()
+RetroEye.Api.NotifyResult :: Method System.String get_Code()
+RetroEye.Api.NotifyResult :: Method System.String get_Id()
+RetroEye.Api.NotifyResult :: Method System.String get_Message()
+RetroEye.Api.NotifyResult :: Property Boolean Queued
+RetroEye.Api.NotifyResult :: Property RetroEye.Api.NotifyStatus Status
+RetroEye.Api.NotifyResult :: Property System.String Code
+RetroEye.Api.NotifyResult :: Property System.String Id
+RetroEye.Api.NotifyResult :: Property System.String Message
+RetroEye.Api.NotifyStatus :: Field Int32 value__
+RetroEye.Api.NotifyStatus :: Field RetroEye.Api.NotifyStatus NotConnected
+RetroEye.Api.NotifyStatus :: Field RetroEye.Api.NotifyStatus NotRunning
+RetroEye.Api.NotifyStatus :: Field RetroEye.Api.NotifyStatus Queued
+RetroEye.Api.NotifyStatus :: Field RetroEye.Api.NotifyStatus Refused
+RetroEye.Api.NotifyStatus :: Field RetroEye.Api.NotifyStatus TimedOut
+RetroEye.Api.PixelScale :: Method Boolean IsWhole(Double)
+RetroEye.Api.RetroEyeApiException :: Constructor Void .ctor(System.String, System.String)
+RetroEye.Api.RetroEyeApiException :: Method System.String get_Code()
+RetroEye.Api.RetroEyeApiException :: Property System.String Code
+RetroEye.Api.RetroEyeClient :: Constructor Void .ctor(System.String, RetroEye.Api.RetroEyeClientOptions)
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler Disconnected
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler Reconnected
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler Restarting
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler Started
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler Stopped
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler`1[RetroEye.Api.NotificationEventArgs] NotificationClicked
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler`1[RetroEye.Api.NotificationEventArgs] NotificationClosed
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler`1[RetroEye.Api.RetroEyeEventArgs] EventReceived
+RetroEye.Api.RetroEyeClient :: Event System.EventHandler`1[RetroEye.Api.RetroEyeEventArgs] StateChanged
+RetroEye.Api.RetroEyeClient :: Method Boolean Supports(System.String)
+RetroEye.Api.RetroEyeClient :: Method Boolean get_IsConnected()
+RetroEye.Api.RetroEyeClient :: Method Boolean get_IsRestarting()
+RetroEye.Api.RetroEyeClient :: Method Boolean get_IsRunning()
+RetroEye.Api.RetroEyeClient :: Method RetroEye.Api.ThemeState ReadFile(System.String)
+RetroEye.Api.RetroEyeClient :: Method RetroEye.Api.ThemeState get_State()
+RetroEye.Api.RetroEyeClient :: Method System.Collections.Generic.IReadOnlyList`1[System.String] get_ServerCapabilities()
+RetroEye.Api.RetroEyeClient :: Method System.String get_Channel()
+RetroEye.Api.RetroEyeClient :: Method System.String get_Folder()
+RetroEye.Api.RetroEyeClient :: Method System.String get_Refused()
+RetroEye.Api.RetroEyeClient :: Method System.Threading.Tasks.Task`1[RetroEye.Api.NotifyResult] TryNotifyAsync(RetroEye.Api.Notification, System.Threading.CancellationToken)
+RetroEye.Api.RetroEyeClient :: Method System.Threading.Tasks.Task`1[RetroEye.Api.ThemeState] GetStateAsync(System.Threading.CancellationToken)
+RetroEye.Api.RetroEyeClient :: Method System.Threading.Tasks.Task`1[System.Boolean] WaitForConnectionAsync(Int32, System.Threading.CancellationToken)
+RetroEye.Api.RetroEyeClient :: Method System.Threading.Tasks.Task`1[System.String] NotifyAsync(RetroEye.Api.Notification, System.Threading.CancellationToken)
+RetroEye.Api.RetroEyeClient :: Method Void Dispose()
+RetroEye.Api.RetroEyeClient :: Method Void Start()
+RetroEye.Api.RetroEyeClient :: Method Void add_Disconnected(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void add_EventReceived(System.EventHandler`1[RetroEye.Api.RetroEyeEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void add_NotificationClicked(System.EventHandler`1[RetroEye.Api.NotificationEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void add_NotificationClosed(System.EventHandler`1[RetroEye.Api.NotificationEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void add_Reconnected(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void add_Restarting(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void add_Started(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void add_StateChanged(System.EventHandler`1[RetroEye.Api.RetroEyeEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void add_Stopped(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void remove_Disconnected(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void remove_EventReceived(System.EventHandler`1[RetroEye.Api.RetroEyeEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void remove_NotificationClicked(System.EventHandler`1[RetroEye.Api.NotificationEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void remove_NotificationClosed(System.EventHandler`1[RetroEye.Api.NotificationEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void remove_Reconnected(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void remove_Restarting(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void remove_Started(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Method Void remove_StateChanged(System.EventHandler`1[RetroEye.Api.RetroEyeEventArgs])
+RetroEye.Api.RetroEyeClient :: Method Void remove_Stopped(System.EventHandler)
+RetroEye.Api.RetroEyeClient :: Property Boolean IsConnected
+RetroEye.Api.RetroEyeClient :: Property Boolean IsRestarting
+RetroEye.Api.RetroEyeClient :: Property Boolean IsRunning
+RetroEye.Api.RetroEyeClient :: Property RetroEye.Api.ThemeState State
+RetroEye.Api.RetroEyeClient :: Property System.Collections.Generic.IReadOnlyList`1[System.String] ServerCapabilities
+RetroEye.Api.RetroEyeClient :: Property System.String Channel
+RetroEye.Api.RetroEyeClient :: Property System.String Folder
+RetroEye.Api.RetroEyeClient :: Property System.String Refused
+RetroEye.Api.RetroEyeClientOptions :: Constructor Void .ctor()
+RetroEye.Api.RetroEyeClientOptions :: Method Boolean get_UsePipe()
+RetroEye.Api.RetroEyeClientOptions :: Method Int32 get_ConnectWaitMs()
+RetroEye.Api.RetroEyeClientOptions :: Method Int32 get_RequestTimeoutMs()
+RetroEye.Api.RetroEyeClientOptions :: Method Int32 get_RestartWaitMs()
+RetroEye.Api.RetroEyeClientOptions :: Method Int32 get_RetryMs()
+RetroEye.Api.RetroEyeClientOptions :: Method System.String get_Channel()
+RetroEye.Api.RetroEyeClientOptions :: Method System.String get_Folder()
+RetroEye.Api.RetroEyeClientOptions :: Method Void set_Channel(System.String)
+RetroEye.Api.RetroEyeClientOptions :: Method Void set_ConnectWaitMs(Int32)
+RetroEye.Api.RetroEyeClientOptions :: Method Void set_Folder(System.String)
+RetroEye.Api.RetroEyeClientOptions :: Method Void set_RequestTimeoutMs(Int32)
+RetroEye.Api.RetroEyeClientOptions :: Method Void set_RestartWaitMs(Int32)
+RetroEye.Api.RetroEyeClientOptions :: Method Void set_RetryMs(Int32)
+RetroEye.Api.RetroEyeClientOptions :: Method Void set_UsePipe(Boolean)
+RetroEye.Api.RetroEyeClientOptions :: Property Boolean UsePipe
+RetroEye.Api.RetroEyeClientOptions :: Property Int32 ConnectWaitMs
+RetroEye.Api.RetroEyeClientOptions :: Property Int32 RequestTimeoutMs
+RetroEye.Api.RetroEyeClientOptions :: Property Int32 RestartWaitMs
+RetroEye.Api.RetroEyeClientOptions :: Property Int32 RetryMs
+RetroEye.Api.RetroEyeClientOptions :: Property System.String Channel
+RetroEye.Api.RetroEyeClientOptions :: Property System.String Folder
+RetroEye.Api.RetroEyeEventArgs :: Constructor Void .ctor(System.String, RetroEye.Api.ApiJson, RetroEye.Api.ThemeState)
+RetroEye.Api.RetroEyeEventArgs :: Method RetroEye.Api.ApiJson get_Message()
+RetroEye.Api.RetroEyeEventArgs :: Method RetroEye.Api.ThemeState get_State()
+RetroEye.Api.RetroEyeEventArgs :: Method System.String get_Name()
+RetroEye.Api.RetroEyeEventArgs :: Property RetroEye.Api.ApiJson Message
+RetroEye.Api.RetroEyeEventArgs :: Property RetroEye.Api.ThemeState State
+RetroEye.Api.RetroEyeEventArgs :: Property System.String Name
+RetroEye.Api.RetroEyeLookFamily :: Field Int32 value__
+RetroEye.Api.RetroEyeLookFamily :: Field RetroEye.Api.RetroEyeLookFamily Aero
+RetroEye.Api.RetroEyeLookFamily :: Field RetroEye.Api.RetroEyeLookFamily Basic
+RetroEye.Api.RetroEyeLookFamily :: Field RetroEye.Api.RetroEyeLookFamily Classic
+RetroEye.Api.RetroEyeLookFamily :: Field RetroEye.Api.RetroEyeLookFamily Luna
+RetroEye.Api.RetroEyeLookFamily :: Field RetroEye.Api.RetroEyeLookFamily Unknown
+RetroEye.Api.RetroEyeWindowsVersion :: Field Int32 value__
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion System
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion Unknown
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion Windows2000
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion Windows7
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion Windows95
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion Windows98
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion WindowsMe
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion WindowsVista
+RetroEye.Api.RetroEyeWindowsVersion :: Field RetroEye.Api.RetroEyeWindowsVersion WindowsXP
+RetroEye.Api.ThemeState :: Constructor Void .ctor(RetroEye.Api.ApiJson, System.String)
+RetroEye.Api.ThemeState :: Method Boolean Has(System.String)
+RetroEye.Api.ThemeState :: Method Boolean get_GlassEnabled()
+RetroEye.Api.ThemeState :: Method Boolean get_IsClassic()
+RetroEye.Api.ThemeState :: Method Boolean get_Restarting()
+RetroEye.Api.ThemeState :: Method Boolean get_Running()
+RetroEye.Api.ThemeState :: Method Double Metric(System.String, Double)
+RetroEye.Api.ThemeState :: Method Double get_CornerRadius()
+RetroEye.Api.ThemeState :: Method Double get_GlassOpacity()
+RetroEye.Api.ThemeState :: Method Double get_Scale()
+RetroEye.Api.ThemeState :: Method Double get_TaskbarHeight()
+RetroEye.Api.ThemeState :: Method Int32 get_ContractMajor()
+RetroEye.Api.ThemeState :: Method Int32 get_ContractMinor()
+RetroEye.Api.ThemeState :: Method Int32 get_Dpi()
+RetroEye.Api.ThemeState :: Method Int32 get_PartsGeneration()
+RetroEye.Api.ThemeState :: Method Int32 get_WindowsDpi()
+RetroEye.Api.ThemeState :: Method Int64 get_Sequence()
+RetroEye.Api.ThemeState :: Method RetroEye.Api.ApiCaptionState get_CaptionActive()
+RetroEye.Api.ThemeState :: Method RetroEye.Api.ApiCaptionState get_CaptionInactive()
+RetroEye.Api.ThemeState :: Method RetroEye.Api.ApiColor Color(System.String, RetroEye.Api.ApiColor)
+RetroEye.Api.ThemeState :: Method RetroEye.Api.ApiFont Font(System.String)
+RetroEye.Api.ThemeState :: Method RetroEye.Api.ApiJson get_Raw()
+RetroEye.Api.ThemeState :: Method RetroEye.Api.ApiPart Part(System.String)
+RetroEye.Api.ThemeState :: Method RetroEye.Api.RetroEyeLookFamily get_LookFamily()
+RetroEye.Api.ThemeState :: Method RetroEye.Api.RetroEyeWindowsVersion get_KnownWindowsVersion()
+RetroEye.Api.ThemeState :: Method RetroEye.Api.ThemeState get_Default()
+RetroEye.Api.ThemeState :: Method System.Collections.Generic.IReadOnlyDictionary`2[System.String,RetroEye.Api.ApiColor] get_Colors()
+RetroEye.Api.ThemeState :: Method System.Collections.Generic.IReadOnlyDictionary`2[System.String,RetroEye.Api.ApiFont] get_Fonts()
+RetroEye.Api.ThemeState :: Method System.Collections.Generic.IReadOnlyDictionary`2[System.String,RetroEye.Api.ApiPart] get_Parts()
+RetroEye.Api.ThemeState :: Method System.Collections.Generic.IReadOnlyDictionary`2[System.String,System.Double] get_Metrics()
+RetroEye.Api.ThemeState :: Method System.Collections.Generic.IReadOnlyList`1[System.String] get_Capabilities()
+RetroEye.Api.ThemeState :: Method System.Collections.Generic.IReadOnlyList`1[System.String] get_CaptionButtonOrder()
+RetroEye.Api.ThemeState :: Method System.Collections.Generic.IReadOnlyList`1[System.String] get_Deprecated()
+RetroEye.Api.ThemeState :: Method System.DateTime get_Written()
+RetroEye.Api.ThemeState :: Method System.Nullable`1[RetroEye.Api.ApiColor] get_GlassColor()
+RetroEye.Api.ThemeState :: Method System.String get_CaptionButtonStyle()
+RetroEye.Api.ThemeState :: Method System.String get_CaptionTextAlign()
+RetroEye.Api.ThemeState :: Method System.String get_CornerShape()
+RetroEye.Api.ThemeState :: Method System.String get_FrameKind()
+RetroEye.Api.ThemeState :: Method System.String get_Instance()
+RetroEye.Api.ThemeState :: Method System.String get_LookId()
+RetroEye.Api.ThemeState :: Method System.String get_LookName()
+RetroEye.Api.ThemeState :: Method System.String get_PartsFolder()
+RetroEye.Api.ThemeState :: Method System.String get_RetroEyeVersion()
+RetroEye.Api.ThemeState :: Method System.String get_SchemeName()
+RetroEye.Api.ThemeState :: Method System.String get_TaskbarEdge()
+RetroEye.Api.ThemeState :: Method System.String get_ThemeName()
+RetroEye.Api.ThemeState :: Method System.String get_VisualStyle()
+RetroEye.Api.ThemeState :: Method System.String get_WindowsName()
+RetroEye.Api.ThemeState :: Method System.String get_WindowsVersion()
+RetroEye.Api.ThemeState :: Property Boolean GlassEnabled
+RetroEye.Api.ThemeState :: Property Boolean IsClassic
+RetroEye.Api.ThemeState :: Property Boolean Restarting
+RetroEye.Api.ThemeState :: Property Boolean Running
+RetroEye.Api.ThemeState :: Property Double CornerRadius
+RetroEye.Api.ThemeState :: Property Double GlassOpacity
+RetroEye.Api.ThemeState :: Property Double Scale
+RetroEye.Api.ThemeState :: Property Double TaskbarHeight
+RetroEye.Api.ThemeState :: Property Int32 ContractMajor
+RetroEye.Api.ThemeState :: Property Int32 ContractMinor
+RetroEye.Api.ThemeState :: Property Int32 Dpi
+RetroEye.Api.ThemeState :: Property Int32 PartsGeneration
+RetroEye.Api.ThemeState :: Property Int32 WindowsDpi
+RetroEye.Api.ThemeState :: Property Int64 Sequence
+RetroEye.Api.ThemeState :: Property RetroEye.Api.ApiCaptionState CaptionActive
+RetroEye.Api.ThemeState :: Property RetroEye.Api.ApiCaptionState CaptionInactive
+RetroEye.Api.ThemeState :: Property RetroEye.Api.ApiJson Raw
+RetroEye.Api.ThemeState :: Property RetroEye.Api.RetroEyeLookFamily LookFamily
+RetroEye.Api.ThemeState :: Property RetroEye.Api.RetroEyeWindowsVersion KnownWindowsVersion
+RetroEye.Api.ThemeState :: Property RetroEye.Api.ThemeState Default
+RetroEye.Api.ThemeState :: Property System.Collections.Generic.IReadOnlyDictionary`2[System.String,RetroEye.Api.ApiColor] Colors
+RetroEye.Api.ThemeState :: Property System.Collections.Generic.IReadOnlyDictionary`2[System.String,RetroEye.Api.ApiFont] Fonts
+RetroEye.Api.ThemeState :: Property System.Collections.Generic.IReadOnlyDictionary`2[System.String,RetroEye.Api.ApiPart] Parts
+RetroEye.Api.ThemeState :: Property System.Collections.Generic.IReadOnlyDictionary`2[System.String,System.Double] Metrics
+RetroEye.Api.ThemeState :: Property System.Collections.Generic.IReadOnlyList`1[System.String] Capabilities
+RetroEye.Api.ThemeState :: Property System.Collections.Generic.IReadOnlyList`1[System.String] CaptionButtonOrder
+RetroEye.Api.ThemeState :: Property System.Collections.Generic.IReadOnlyList`1[System.String] Deprecated
+RetroEye.Api.ThemeState :: Property System.DateTime Written
+RetroEye.Api.ThemeState :: Property System.Nullable`1[RetroEye.Api.ApiColor] GlassColor
+RetroEye.Api.ThemeState :: Property System.String CaptionButtonStyle
+RetroEye.Api.ThemeState :: Property System.String CaptionTextAlign
+RetroEye.Api.ThemeState :: Property System.String CornerShape
+RetroEye.Api.ThemeState :: Property System.String FrameKind
+RetroEye.Api.ThemeState :: Property System.String Instance
+RetroEye.Api.ThemeState :: Property System.String LookId
+RetroEye.Api.ThemeState :: Property System.String LookName
+RetroEye.Api.ThemeState :: Property System.String PartsFolder
+RetroEye.Api.ThemeState :: Property System.String RetroEyeVersion
+RetroEye.Api.ThemeState :: Property System.String SchemeName
+RetroEye.Api.ThemeState :: Property System.String TaskbarEdge
+RetroEye.Api.ThemeState :: Property System.String ThemeName
+RetroEye.Api.ThemeState :: Property System.String VisualStyle
+RetroEye.Api.ThemeState :: Property System.String WindowsName
+RetroEye.Api.ThemeState :: Property System.String WindowsVersion
+class RetroEye.Api.ApiCaptionState
+class RetroEye.Api.ApiColorNames
+class RetroEye.Api.ApiFill
+class RetroEye.Api.ApiFont
+class RetroEye.Api.ApiGradientStop
+class RetroEye.Api.ApiJson
+class RetroEye.Api.ApiNames
+class RetroEye.Api.ApiPart
+class RetroEye.Api.Notification
+class RetroEye.Api.NotificationEventArgs
+class RetroEye.Api.NotifyResult
+class RetroEye.Api.PixelScale
+class RetroEye.Api.RetroEyeApiException
+class RetroEye.Api.RetroEyeClient
+class RetroEye.Api.RetroEyeClientOptions
+class RetroEye.Api.RetroEyeEventArgs
+class RetroEye.Api.ThemeState
+enum RetroEye.Api.ApiJsonKind
+enum RetroEye.Api.NotificationIcon
+enum RetroEye.Api.NotifyStatus
+enum RetroEye.Api.RetroEyeLookFamily
+enum RetroEye.Api.RetroEyeWindowsVersion
+struct RetroEye.Api.ApiColor

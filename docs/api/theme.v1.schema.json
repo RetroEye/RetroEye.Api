@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "retroeye-api-theme-v1",
+  "title": "RetroEye app API, contract 1.0: theme.json",
+  "description": "What RetroEye publishes about the Windows version it shows. Frozen: later contracts only add members, so readers must ignore members they don't know.",
+  "type": "object",
+  "required": ["contract", "capabilities", "deprecated", "sequence", "instance", "running", "written", "retroEye", "windows", "look", "colors", "fonts", "metrics", "scale", "chrome", "taskbar", "parts"],
+  "properties": {
+    "contract": {
+      "type": "object",
+      "required": ["major", "minor", "version"],
+      "properties": {
+        "major": { "type": "integer", "minimum": 1 },
+        "minor": { "type": "integer", "minimum": 0 },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" }
+      }
+    },
+    "capabilities": { "type": "array", "items": { "type": "string" } },
+    "deprecated": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "since", "removedInMajor", "use"],
+        "properties": {
+          "name": { "type": "string" },
+          "since": { "type": "string" },
+          "removedInMajor": { "type": "integer" },
+          "use": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "sequence": { "type": "integer", "minimum": 0 },
+    "instance": { "type": "string" },
+    "running": { "type": "boolean" },
+    "written": { "type": "string" },
+    "retroEye": {
+      "type": "object",
+      "required": ["version", "processId"],
+      "properties": {
+        "version": { "type": "string" },
+        "processId": { "type": "integer" }
+      }
+    },
+    "windows": {
+      "type": "object",
+      "required": ["version", "name"],
+      "properties": {
+        "version": { "type": "string", "enum": ["95", "98", "me", "2000", "xp", "vista", "7", "system"] },
+        "name": { "type": "string" }
+      }
+    },
+    "look": {
+      "type": "object",
+      "required": ["id", "name", "classic", "theme", "visualStyle", "scheme"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "classic": { "type": "boolean" },
+        "theme": { "type": "string" },
+        "visualStyle": { "type": "string", "enum": ["Classic", "Luna.NormalColor", "Luna.Homestead", "Luna.Metallic", "Royale.NormalColor", "Aero.NormalColor"] },
+        "scheme": { "type": "string" }
+      }
+    },
+    "colors": {
+      "type": "object",
+      "required": ["scrollBar", "desktop", "activeCaption", "inactiveCaption", "menu", "window", "windowFrame", "menuText", "windowText", "captionText", "activeBorder", "inactiveBorder", "appWorkspace", "highlight", "highlightText", "buttonFace", "buttonShadow", "grayText", "buttonText", "inactiveCaptionText", "buttonHighlight", "buttonDarkShadow", "buttonLight", "infoText", "infoBackground", "buttonAlternateFace", "hotLight", "gradientActiveCaption", "gradientInactiveCaption", "menuHighlight", "menuBar"],
+      "additionalProperties": { "$ref": "#/$defs/color" }
+    },
+    "fonts": {
+      "type": "object",
+      "required": ["caption", "smallCaption", "menu", "status", "message", "icon"],
+      "additionalProperties": { "$ref": "#/$defs/font" }
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["captionHeight", "captionButtonWidth", "captionButtonHeight", "smallCaptionHeight", "borderWidth", "sizingBorderWidth", "paddedBorderWidth", "frameWidth", "fixedFrameWidth", "edge", "menuHeight", "scrollBarWidth", "scrollBarHeight", "iconSize", "iconSpacingX", "iconSpacingY", "captionTextInset"],
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "scale": {
+      "type": "object",
+      "required": ["factor", "dpi", "windowsDpi"],
+      "properties": {
+        "factor": { "type": "number", "minimum": 0.5 },
+        "dpi": { "type": "integer", "minimum": 48 },
+        "windowsDpi": { "type": "integer", "minimum": 48 }
+      }
+    },
+    "chrome": {
+      "type": "object",
+      "required": ["frameKind", "corners", "caption", "buttons", "frame", "glass"],
+      "properties": {
+        "frameKind": { "type": "string", "enum": ["raised3d", "luna", "aero", "basic"] },
+        "corners": {
+          "type": "object",
+          "required": ["shape", "radius"],
+          "properties": {
+            "shape": { "type": "string", "enum": ["square", "rounded"] },
+            "radius": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "caption": {
+          "type": "object",
+          "required": ["active", "inactive", "textAlign", "font", "iconShown", "iconSize", "height"],
+          "properties": {
+            "active": { "$ref": "#/$defs/captionState" },
+            "inactive": { "$ref": "#/$defs/captionState" },
+            "textAlign": { "type": "string", "enum": ["left", "center"] },
+            "font": { "type": "string" },
+            "iconShown": { "type": "boolean" },
+            "iconSize": { "type": "integer", "minimum": 0 },
+            "height": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "buttons": {
+          "type": "object",
+          "required": ["style", "order", "dialogOrder", "width", "height", "closeWidth", "gap", "gapBeforeClose", "glyph"],
+          "properties": {
+            "style": { "type": "string", "enum": ["classic3d", "luna", "aero"] },
+            "order": { "type": "array", "items": { "type": "string", "enum": ["minimize", "maximize", "close", "help"] } },
+            "dialogOrder": { "type": "array", "items": { "type": "string", "enum": ["minimize", "maximize", "close", "help"] } },
+            "width": { "type": "integer", "minimum": 1 },
+            "height": { "type": "integer", "minimum": 1 },
+            "closeWidth": { "type": "integer", "minimum": 1 },
+            "gap": { "type": "integer" },
+            "gapBeforeClose": { "type": "integer" },
+            "glyph": { "$ref": "#/$defs/color" }
+          }
+        },
+        "frame": {
+          "type": "object",
+          "required": ["active", "inactive", "thickness", "lines"],
+          "properties": {
+            "active": { "$ref": "#/$defs/color" },
+            "inactive": { "$ref": "#/$defs/color" },
+            "thickness": { "type": "integer", "minimum": 0 },
+            "lines": {
+              "type": "object",
+              "required": ["active", "inactive"],
+              "properties": {
+                "active": { "$ref": "#/$defs/lines" },
+                "inactive": { "$ref": "#/$defs/lines" }
+              }
+            }
+          }
+        },
+        "glass": {
+          "type": "object",
+          "required": ["enabled", "color", "intensity", "transparency", "opacity"],
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "color": { "type": ["string", "null"] },
+            "intensity": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "transparency": { "type": "boolean" },
+            "opacity": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    },
+    "taskbar": {
+      "type": "object",
+      "required": ["found", "edge", "height", "autoHide", "bounds"],
+      "properties": {
+        "found": { "type": "boolean" },
+        "edge": { "type": "string", "enum": ["bottom", "top", "left", "right"] },
+        "height": { "type": "number", "minimum": 0 },
+        "autoHide": { "type": "boolean" },
+        "bounds": {
+          "type": ["object", "null"],
+          "required": ["x", "y", "width", "height"],
+          "properties": {
+            "x": { "type": "integer" },
+            "y": { "type": "integer" },
+            "width": { "type": "integer", "minimum": 0 },
+            "height": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "parts": {
+      "type": "object",
+      "required": ["folder", "scale", "dpi", "generation", "items"],
+      "properties": {
+        "folder": { "type": "string" },
+        "scale": { "type": "number", "minimum": 0.5 },
+        "dpi": { "type": "integer", "minimum": 48 },
+        "generation": { "type": "integer", "minimum": 0 },
+        "items": { "type": "object", "additionalProperties": { "$ref": "#/$defs/part" } }
+      }
+    }
+  },
+  "$defs": {
+    "color": { "type": "string", "pattern": "^#[0-9A-F]{6}$" },
+    "font": {
+      "type": "object",
+      "required": ["face", "drawnFace", "sizePt", "weight", "italic", "bitmap"],
+      "properties": {
+        "face": { "type": "string" },
+        "drawnFace": { "type": "string" },
+        "sizePt": { "type": "number", "minimum": 1 },
+        "weight": { "type": "integer", "minimum": 100, "maximum": 900 },
+        "italic": { "type": "boolean" },
+        "bitmap": { "type": "boolean" }
+      }
+    },
+    "fill": {
+      "type": "object",
+      "required": ["kind", "stops"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["solid", "horizontal", "vertical"] },
+        "stops": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["offset", "color"],
+            "properties": {
+              "offset": { "type": "number", "minimum": 0, "maximum": 1 },
+              "color": { "$ref": "#/$defs/color" }
+            }
+          }
+        }
+      }
+    },
+    "captionState": {
+      "type": "object",
+      "required": ["fill", "text", "textShadow", "textGlow"],
+      "properties": {
+        "fill": { "$ref": "#/$defs/fill" },
+        "text": { "$ref": "#/$defs/color" },
+        "textShadow": { "type": ["string", "null"] },
+        "textGlow": { "type": "boolean" }
+      }
+    },
+    "lines": {
+      "type": "object",
+      "required": ["topLeft", "bottomRight"],
+      "properties": {
+        "topLeft": { "type": "array", "items": { "$ref": "#/$defs/color" } },
+        "bottomRight": { "type": "array", "items": { "$ref": "#/$defs/color" } }
+      }
+    },
+    "insets": {
+      "type": "object",
+      "required": ["left", "top", "right", "bottom"],
+      "properties": {
+        "left": { "type": "integer", "minimum": 0 },
+        "top": { "type": "integer", "minimum": 0 },
+        "right": { "type": "integer", "minimum": 0 },
+        "bottom": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "part": {
+      "type": "object",
+      "required": ["file", "width", "height", "slice"],
+      "properties": {
+        "file": { "type": "string", "pattern": "^[a-z0-9.-]+\\.png$" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "slice": { "$ref": "#/$defs/insets" },
+        "content": { "$ref": "#/$defs/insets" }
+      }
+    }
+  }
+}

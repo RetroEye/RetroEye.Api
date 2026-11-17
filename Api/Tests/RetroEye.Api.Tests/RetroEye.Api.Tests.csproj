@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    The app API libraries' own tests: the JSON reader and writer, the client against a stand-in RetroEye on a real
+    pipe, the contract (every version's theme.json against the schema and the golden lists in docs\api), the public
+    surface baselines (ApiBaseline\) and old/new compatibility. They need nothing but the libraries and the spec files:
+    States\ holds theme.json files as RetroEye writes them (RetroEye's own tests check they still are).
+    Run with: dotnet test Api\Tests\RetroEye.Api.Tests\RetroEye.Api.Tests.csproj
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <RootNamespace>RetroEye.Api.Tests</RootNamespace>
+    <AssemblyName>RetroEye.Api.Tests</AssemblyName>
+    <!-- The client tests wait on pipes and events on purpose, each with a time limit -->
+    <NoWarn>$(NoWarn);xUnit1031</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RetroEye.Api\RetroEye.Api.csproj" />
+    <ProjectReference Include="..\..\RetroEye.Theming.Wpf\RetroEye.Theming.Wpf.csproj" SetTargetFramework="TargetFramework=net10.0-windows" />
+  </ItemGroup>
+
+</Project>

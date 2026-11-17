@@ -1,0 +1,47 @@
+RetroEye.Theming.Wpf.NineSlice :: Constructor Void .ctor()
+RetroEye.Theming.Wpf.NineSlice :: Method Double get_PixelsPerUnit()
+RetroEye.Theming.Wpf.NineSlice :: Method System.Windows.Media.Imaging.BitmapSource get_Source()
+RetroEye.Theming.Wpf.NineSlice :: Method System.Windows.Thickness get_Slice()
+RetroEye.Theming.Wpf.NineSlice :: Method Void set_PixelsPerUnit(Double)
+RetroEye.Theming.Wpf.NineSlice :: Method Void set_Slice(System.Windows.Thickness)
+RetroEye.Theming.Wpf.NineSlice :: Method Void set_Source(System.Windows.Media.Imaging.BitmapSource)
+RetroEye.Theming.Wpf.NineSlice :: Property Double PixelsPerUnit
+RetroEye.Theming.Wpf.NineSlice :: Property System.Windows.Media.Imaging.BitmapSource Source
+RetroEye.Theming.Wpf.NineSlice :: Property System.Windows.Thickness Slice
+RetroEye.Theming.Wpf.RetroChrome :: Constructor Void .ctor()
+RetroEye.Theming.Wpf.RetroEyeKeys :: Field System.String State
+RetroEye.Theming.Wpf.RetroEyeKeys :: Method System.String Color(System.String)
+RetroEye.Theming.Wpf.RetroEyeKeys :: Method System.String FontFamily(System.String)
+RetroEye.Theming.Wpf.RetroEyeKeys :: Method System.String FontSize(System.String)
+RetroEye.Theming.Wpf.RetroEyeKeys :: Method System.String FontWeight(System.String)
+RetroEye.Theming.Wpf.RetroEyeKeys :: Method System.String Metric(System.String)
+RetroEye.Theming.Wpf.RetroEyeTheme :: Method Double LayoutScale(RetroEye.Api.ThemeState, Double)
+RetroEye.Theming.Wpf.RetroEyeTheme :: Method Double PixelsPerUnit(RetroEye.Api.ThemeState)
+RetroEye.Theming.Wpf.RetroEyeTheme :: Method System.Windows.ResourceDictionary Build(RetroEye.Api.ThemeState)
+RetroEye.Theming.Wpf.RetroEyeTheme :: Method System.Windows.ResourceDictionary ThemeDictionary(System.String)
+RetroEye.Theming.Wpf.RetroEyeTheme :: Method Void Apply(System.Windows.ResourceDictionary, RetroEye.Api.ThemeState)
+RetroEye.Theming.Wpf.RetroEyeTheme :: Method Void Follow(System.Windows.Application, RetroEye.Api.RetroEyeClient)
+RetroEye.Theming.Wpf.RetroWindow :: Constructor Void .ctor()
+RetroEye.Theming.Wpf.RetroWindow :: Event System.EventHandler HelpRequested
+RetroEye.Theming.Wpf.RetroWindow :: Field System.Windows.DependencyProperty IsDialogProperty
+RetroEye.Theming.Wpf.RetroWindow :: Field System.Windows.DependencyProperty StateProperty
+RetroEye.Theming.Wpf.RetroWindow :: Method Boolean get_IsDialog()
+RetroEye.Theming.Wpf.RetroWindow :: Method Double get_LayoutScale()
+RetroEye.Theming.Wpf.RetroWindow :: Method RetroEye.Api.RetroEyeClient get_Client()
+RetroEye.Theming.Wpf.RetroWindow :: Method RetroEye.Api.ThemeState get_State()
+RetroEye.Theming.Wpf.RetroWindow :: Method System.Windows.Media.Imaging.BitmapSource RenderPreview(Boolean, Double)
+RetroEye.Theming.Wpf.RetroWindow :: Method Void OnApplyTemplate()
+RetroEye.Theming.Wpf.RetroWindow :: Method Void add_HelpRequested(System.EventHandler)
+RetroEye.Theming.Wpf.RetroWindow :: Method Void remove_HelpRequested(System.EventHandler)
+RetroEye.Theming.Wpf.RetroWindow :: Method Void set_Client(RetroEye.Api.RetroEyeClient)
+RetroEye.Theming.Wpf.RetroWindow :: Method Void set_IsDialog(Boolean)
+RetroEye.Theming.Wpf.RetroWindow :: Method Void set_State(RetroEye.Api.ThemeState)
+RetroEye.Theming.Wpf.RetroWindow :: Property Boolean IsDialog
+RetroEye.Theming.Wpf.RetroWindow :: Property Double LayoutScale
+RetroEye.Theming.Wpf.RetroWindow :: Property RetroEye.Api.RetroEyeClient Client
+RetroEye.Theming.Wpf.RetroWindow :: Property RetroEye.Api.ThemeState State
+class RetroEye.Theming.Wpf.NineSlice
+class RetroEye.Theming.Wpf.RetroChrome
+class RetroEye.Theming.Wpf.RetroEyeKeys
+class RetroEye.Theming.Wpf.RetroEyeTheme
+class RetroEye.Theming.Wpf.RetroWindow

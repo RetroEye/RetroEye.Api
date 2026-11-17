@@ -1,0 +1,266 @@
+{
+  "contract": {
+    "major": 1,
+    "minor": 1,
+    "version": "1.1"
+  },
+  "capabilities": [
+    "state",
+    "state.file",
+    "state.event",
+    "subscribe",
+    "events.themeChanged",
+    "events.versionChanged",
+    "events.dpiChanged",
+    "events.taskbarMoved",
+    "events.started",
+    "events.shuttingDown",
+    "notify",
+    "notify.icons",
+    "notify.click",
+    "notify.close",
+    "parts",
+    "parts.frame",
+    "parts.caption",
+    "parts.buttons",
+    "parts.controls",
+    "glass",
+    "events.restarting"
+  ],
+  "deprecated": [],
+  "sequence": 1,
+  "instance": "test-instance",
+  "running": true,
+  "written": "2026-11-16T12:00:00.000Z",
+  "retroEye": {
+    "version": "1.0.0.8",
+    "processId": 1234
+  },
+  "windows": {
+    "version": "95",
+    "name": "Windows 95"
+  },
+  "look": {
+    "id": "classic",
+    "name": "Classic",
+    "classic": true,
+    "theme": "Windows 95-98",
+    "visualStyle": "Classic",
+    "scheme": "Windows Standard"
+  },
+  "colors": {
+    "scrollBar": "#C0C0C0",
+    "desktop": "#008080",
+    "activeCaption": "#000080",
+    "inactiveCaption": "#808080",
+    "menu": "#C0C0C0",
+    "window": "#FFFFFF",
+    "windowFrame": "#000000",
+    "menuText": "#000000",
+    "windowText": "#000000",
+    "captionText": "#FFFFFF",
+    "activeBorder": "#C0C0C0",
+    "inactiveBorder": "#C0C0C0",
+    "appWorkspace": "#808080",
+    "highlight": "#000080",
+    "highlightText": "#FFFFFF",
+    "buttonFace": "#C0C0C0",
+    "buttonShadow": "#808080",
+    "grayText": "#808080",
+    "buttonText": "#000000",
+    "inactiveCaptionText": "#C0C0C0",
+    "buttonHighlight": "#FFFFFF",
+    "buttonDarkShadow": "#000000",
+    "buttonLight": "#C0C0C0",
+    "infoText": "#000000",
+    "infoBackground": "#FFFFE1",
+    "buttonAlternateFace": "#C0C0C0",
+    "hotLight": "#000080",
+    "gradientActiveCaption": "#000080",
+    "gradientInactiveCaption": "#808080",
+    "menuHighlight": "#000080",
+    "menuBar": "#C0C0C0"
+  },
+  "fonts": {
+    "caption": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 700,
+      "italic": false,
+      "bitmap": true
+    },
+    "smallCaption": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    },
+    "menu": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    },
+    "status": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    },
+    "message": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    },
+    "icon": {
+      "face": "MS Sans Serif",
+      "drawnFace": "Microsoft Sans Serif",
+      "sizePt": 8,
+      "weight": 400,
+      "italic": false,
+      "bitmap": true
+    }
+  },
+  "metrics": {
+    "captionHeight": 19,
+    "captionButtonWidth": 18,
+    "captionButtonHeight": 18,
+    "smallCaptionHeight": 16,
+    "borderWidth": 1,
+    "sizingBorderWidth": 1,
+    "paddedBorderWidth": 0,
+    "frameWidth": 4,
+    "fixedFrameWidth": 3,
+    "edge": 2,
+    "menuHeight": 19,
+    "scrollBarWidth": 16,
+    "scrollBarHeight": 16,
+    "iconSize": 32,
+    "iconSpacingX": 75,
+    "iconSpacingY": 75,
+    "captionTextInset": 2
+  },
+  "scale": {
+    "factor": 1,
+    "dpi": 96,
+    "windowsDpi": 96
+  },
+  "chrome": {
+    "frameKind": "raised3d",
+    "corners": {
+      "shape": "square",
+      "radius": 0
+    },
+    "caption": {
+      "active": {
+        "fill": {
+          "kind": "solid",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#000080"
+            }
+          ]
+        },
+        "text": "#FFFFFF",
+        "textShadow": null,
+        "textGlow": false
+      },
+      "inactive": {
+        "fill": {
+          "kind": "solid",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#808080"
+            }
+          ]
+        },
+        "text": "#C0C0C0",
+        "textShadow": null,
+        "textGlow": false
+      },
+      "textAlign": "left",
+      "font": "caption",
+      "iconShown": true,
+      "iconSize": 16,
+      "height": 18
+    },
+    "buttons": {
+      "style": "classic3d",
+      "order": [
+        "minimize",
+        "maximize",
+        "close"
+      ],
+      "dialogOrder": [
+        "help",
+        "close"
+      ],
+      "width": 16,
+      "height": 14,
+      "closeWidth": 16,
+      "gap": 0,
+      "gapBeforeClose": 2,
+      "glyph": "#000000"
+    },
+    "frame": {
+      "active": "#C0C0C0",
+      "inactive": "#C0C0C0",
+      "thickness": 4,
+      "lines": {
+        "active": {
+          "topLeft": [
+            "#C0C0C0",
+            "#FFFFFF"
+          ],
+          "bottomRight": [
+            "#000000",
+            "#808080"
+          ]
+        },
+        "inactive": {
+          "topLeft": [
+            "#C0C0C0",
+            "#FFFFFF"
+          ],
+          "bottomRight": [
+            "#000000",
+            "#808080"
+          ]
+        }
+      }
+    },
+    "glass": {
+      "enabled": false,
+      "color": null,
+      "intensity": 0,
+      "transparency": false,
+      "opacity": 0
+    }
+  },
+  "taskbar": {
+    "found": false,
+    "edge": "bottom",
+    "height": 28,
+    "autoHide": false,
+    "bounds": null
+  },
+  "parts": {
+    "folder": "parts",
+    "scale": 1,
+    "dpi": 96,
+    "generation": 0,
+    "items": {}
+  }
+}

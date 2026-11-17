@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    A program with no window, tray icon or menu that follows RetroEye and shows its alerts as the era's balloons.
+    Built as a Windows app (WinExe), so starting it opens no console at all; started with the console switch it shows its
+    lines in RetroEye's own Command Prompt.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>RetroEye.AlertConsole</AssemblyName>
+    <RootNamespace>RetroEye.Samples.AlertConsole</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RetroEye.Api\RetroEye.Api.csproj" />
+  </ItemGroup>
+
+</Project>

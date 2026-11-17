@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- A WPF app that looks like the Windows version RetroEye shows: RetroWindow and RetroEyeTheme (docs\API.md). -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>RetroEye.WpfSample</AssemblyName>
+    <RootNamespace>RetroEye.Samples.Wpf</RootNamespace>
+    <StartupObject>RetroEye.Samples.Wpf.Program</StartupObject>
+    <!-- Per-Monitor V2, so each screen's DPI is its own and RetroWindow can be crisp on each -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RetroEye.Theming.Wpf\RetroEye.Theming.Wpf.csproj" />
+  </ItemGroup>
+
+</Project>

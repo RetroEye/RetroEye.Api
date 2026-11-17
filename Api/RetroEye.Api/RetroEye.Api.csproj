@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RetroEye.Api: the public library other programs use to look like the Windows version RetroEye shows and to talk
+    to it (contract v1, docs\API.md). Plain .NET Standard 2.0 with no packages, no WPF and no WinForms, so any .NET
+    program can use it, windowless ones included.
+    PUBLIC SURFACE: it ships un-obfuscated and readable (RetroEye.exe itself stays obfuscated), MIT licensed
+    (..\LICENSE), as the NuGet package RetroEye.Api.
+  -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>RetroEye.Api</RootNamespace>
+    <AssemblyName>RetroEye.Api</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- A missing /// summary on a public member is an error, so the package's IntelliSense is never incomplete -->
+    <WarningsAsErrors>$(WarningsAsErrors);CS1591</WarningsAsErrors>
+    <Product>RetroEye.Api</Product>
+    <!-- Package (authors, licence, icon, readme, symbols, URLs: ..\Directory.Build.props) -->
+    <IsPackable>true</IsPackable>
+    <PackageId>RetroEye.Api</PackageId>
+    <Description>Talk to RetroEye from any .NET program: read the Windows version and look it shows (colours, fonts, metrics, title bars; app API contract v1), follow its changes live, and show your alerts as that version's own tray balloons. .NET Standard 2.0, no dependencies, works in programs with no window.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="RetroEye.Tests" />
+    <InternalsVisibleTo Include="RetroEye.Api.Tests" />
+  </ItemGroup>
+
+</Project>

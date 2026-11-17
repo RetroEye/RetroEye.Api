@@ -1,0 +1,348 @@
+capability events.dpiChanged
+capability events.shuttingDown
+capability events.started
+capability events.taskbarMoved
+capability events.themeChanged
+capability events.versionChanged
+capability glass
+capability notify
+capability notify.click
+capability notify.close
+capability notify.icons
+capability parts
+capability parts.buttons
+capability parts.caption
+capability parts.controls
+capability parts.frame
+capability state
+capability state.event
+capability state.file
+capability subscribe
+color activeBorder
+color activeCaption
+color appWorkspace
+color buttonAlternateFace
+color buttonDarkShadow
+color buttonFace
+color buttonHighlight
+color buttonLight
+color buttonShadow
+color buttonText
+color captionText
+color desktop
+color gradientActiveCaption
+color gradientInactiveCaption
+color grayText
+color highlight
+color highlightText
+color hotLight
+color inactiveBorder
+color inactiveCaption
+color inactiveCaptionText
+color infoBackground
+color infoText
+color menu
+color menuBar
+color menuHighlight
+color menuText
+color scrollBar
+color window
+color windowFrame
+color windowText
+error badArgument
+error badJson
+error disabled
+error helloFirst
+error queueFull
+error rateLimited
+error tooLarge
+error tooManyClients
+error unknownType
+error unsupportedContract
+event dpiChanged
+event notificationClicked
+event notificationClosed
+event shuttingDown
+event started
+event taskbarMoved
+event themeChanged
+event versionChanged
+field  object
+field capabilities array
+field capabilities[] string
+field chrome object
+field chrome.buttons object
+field chrome.buttons.closeWidth number
+field chrome.buttons.dialogOrder array
+field chrome.buttons.dialogOrder[] string
+field chrome.buttons.gap number
+field chrome.buttons.gapBeforeClose number
+field chrome.buttons.glyph string
+field chrome.buttons.height number
+field chrome.buttons.maximizeWidth number
+field chrome.buttons.order array
+field chrome.buttons.order[] string
+field chrome.buttons.style string
+field chrome.buttons.width number
+field chrome.caption object
+field chrome.caption.active object
+field chrome.caption.active.fill object
+field chrome.caption.active.fill.kind string
+field chrome.caption.active.fill.stops array
+field chrome.caption.active.fill.stops[] object
+field chrome.caption.active.fill.stops[].color string
+field chrome.caption.active.fill.stops[].offset number
+field chrome.caption.active.text string
+field chrome.caption.active.textGlow boolean
+field chrome.caption.active.textShadow null
+field chrome.caption.active.textShadow string
+field chrome.caption.font string
+field chrome.caption.height number
+field chrome.caption.iconShown boolean
+field chrome.caption.iconSize number
+field chrome.caption.inactive object
+field chrome.caption.inactive.fill object
+field chrome.caption.inactive.fill.kind string
+field chrome.caption.inactive.fill.stops array
+field chrome.caption.inactive.fill.stops[] object
+field chrome.caption.inactive.fill.stops[].color string
+field chrome.caption.inactive.fill.stops[].offset number
+field chrome.caption.inactive.text string
+field chrome.caption.inactive.textGlow boolean
+field chrome.caption.inactive.textShadow null
+field chrome.caption.textAlign string
+field chrome.corners object
+field chrome.corners.radius number
+field chrome.corners.shape string
+field chrome.frame object
+field chrome.frame.active string
+field chrome.frame.inactive string
+field chrome.frame.lines object
+field chrome.frame.lines.active object
+field chrome.frame.lines.active.bottomRight array
+field chrome.frame.lines.active.bottomRight[] string
+field chrome.frame.lines.active.topLeft array
+field chrome.frame.lines.active.topLeft[] string
+field chrome.frame.lines.inactive object
+field chrome.frame.lines.inactive.bottomRight array
+field chrome.frame.lines.inactive.bottomRight[] string
+field chrome.frame.lines.inactive.topLeft array
+field chrome.frame.lines.inactive.topLeft[] string
+field chrome.frame.thickness number
+field chrome.frameKind string
+field chrome.glass object
+field chrome.glass.color null
+field chrome.glass.color string
+field chrome.glass.enabled boolean
+field chrome.glass.intensity number
+field chrome.glass.opacity number
+field chrome.glass.transparency boolean
+field colors object
+field colors.activeBorder string
+field colors.activeCaption string
+field colors.appWorkspace string
+field colors.buttonAlternateFace string
+field colors.buttonDarkShadow string
+field colors.buttonFace string
+field colors.buttonHighlight string
+field colors.buttonLight string
+field colors.buttonShadow string
+field colors.buttonText string
+field colors.captionText string
+field colors.desktop string
+field colors.gradientActiveCaption string
+field colors.gradientInactiveCaption string
+field colors.grayText string
+field colors.highlight string
+field colors.highlightText string
+field colors.hotLight string
+field colors.inactiveBorder string
+field colors.inactiveCaption string
+field colors.inactiveCaptionText string
+field colors.infoBackground string
+field colors.infoText string
+field colors.menu string
+field colors.menuBar string
+field colors.menuHighlight string
+field colors.menuText string
+field colors.scrollBar string
+field colors.window string
+field colors.windowFrame string
+field colors.windowText string
+field contract object
+field contract.major number
+field contract.minor number
+field contract.version string
+field deprecated array
+field fonts object
+field fonts.caption object
+field fonts.caption.bitmap boolean
+field fonts.caption.drawnFace string
+field fonts.caption.face string
+field fonts.caption.italic boolean
+field fonts.caption.sizePt number
+field fonts.caption.weight number
+field fonts.icon object
+field fonts.icon.bitmap boolean
+field fonts.icon.drawnFace string
+field fonts.icon.face string
+field fonts.icon.italic boolean
+field fonts.icon.sizePt number
+field fonts.icon.weight number
+field fonts.menu object
+field fonts.menu.bitmap boolean
+field fonts.menu.drawnFace string
+field fonts.menu.face string
+field fonts.menu.italic boolean
+field fonts.menu.sizePt number
+field fonts.menu.weight number
+field fonts.message object
+field fonts.message.bitmap boolean
+field fonts.message.drawnFace string
+field fonts.message.face string
+field fonts.message.italic boolean
+field fonts.message.sizePt number
+field fonts.message.weight number
+field fonts.smallCaption object
+field fonts.smallCaption.bitmap boolean
+field fonts.smallCaption.drawnFace string
+field fonts.smallCaption.face string
+field fonts.smallCaption.italic boolean
+field fonts.smallCaption.sizePt number
+field fonts.smallCaption.weight number
+field fonts.status object
+field fonts.status.bitmap boolean
+field fonts.status.drawnFace string
+field fonts.status.face string
+field fonts.status.italic boolean
+field fonts.status.sizePt number
+field fonts.status.weight number
+field instance string
+field look object
+field look.classic boolean
+field look.id string
+field look.name string
+field look.scheme string
+field look.theme string
+field look.visualStyle string
+field metrics object
+field metrics.borderWidth number
+field metrics.captionButtonHeight number
+field metrics.captionButtonWidth number
+field metrics.captionHeight number
+field metrics.captionTextInset number
+field metrics.edge number
+field metrics.fixedFrameWidth number
+field metrics.frameWidth number
+field metrics.iconSize number
+field metrics.iconSpacingX number
+field metrics.iconSpacingY number
+field metrics.menuHeight number
+field metrics.paddedBorderWidth number
+field metrics.scrollBarHeight number
+field metrics.scrollBarWidth number
+field metrics.sizingBorderWidth number
+field metrics.smallCaptionHeight number
+field parts object
+field parts.dpi number
+field parts.folder string
+field parts.generation number
+field parts.items object
+field parts.items.* object
+field parts.items.*.content object
+field parts.items.*.content.bottom number
+field parts.items.*.content.left number
+field parts.items.*.content.right number
+field parts.items.*.content.top number
+field parts.items.*.file string
+field parts.items.*.height number
+field parts.items.*.slice object
+field parts.items.*.slice.bottom number
+field parts.items.*.slice.left number
+field parts.items.*.slice.right number
+field parts.items.*.slice.top number
+field parts.items.*.width number
+field parts.scale number
+field retroEye object
+field retroEye.processId number
+field retroEye.version string
+field running boolean
+field scale object
+field scale.dpi number
+field scale.factor number
+field scale.windowsDpi number
+field sequence number
+field taskbar object
+field taskbar.autoHide boolean
+field taskbar.bounds null
+field taskbar.edge string
+field taskbar.found boolean
+field taskbar.height number
+field windows object
+field windows.name string
+field windows.version string
+field written string
+name event Local\RetroEye.Api.v1.Changed.SID
+name folder api\v1
+name pipe RetroEye.Api.v1.0.SID
+part button.close.disabled
+part button.close.hot
+part button.close.inactive
+part button.close.normal
+part button.close.pressed
+part button.help.hot
+part button.help.inactive
+part button.help.normal
+part button.help.pressed
+part button.maximize.disabled
+part button.maximize.hot
+part button.maximize.inactive
+part button.maximize.normal
+part button.maximize.pressed
+part button.minimize.disabled
+part button.minimize.hot
+part button.minimize.inactive
+part button.minimize.normal
+part button.minimize.pressed
+part button.restore.disabled
+part button.restore.hot
+part button.restore.inactive
+part button.restore.normal
+part button.restore.pressed
+part captionActive
+part captionInactive
+part frameActive
+part frameInactive
+part pushButton.default
+part pushButton.disabled
+part pushButton.normal
+part pushButton.pressed
+part scrollArrow.down.disabled
+part scrollArrow.down.normal
+part scrollArrow.down.pressed
+part scrollArrow.left.disabled
+part scrollArrow.left.normal
+part scrollArrow.left.pressed
+part scrollArrow.right.disabled
+part scrollArrow.right.normal
+part scrollArrow.right.pressed
+part scrollArrow.up.disabled
+part scrollArrow.up.normal
+part scrollArrow.up.pressed
+part textBox.normal
+reply bye
+reply error
+reply event
+reply pong
+reply queued
+reply state
+reply subscribed
+reply unsubscribed
+reply welcome
+request bye
+request get
+request hello
+request notify
+request ping
+request subscribe
+request unsubscribe
